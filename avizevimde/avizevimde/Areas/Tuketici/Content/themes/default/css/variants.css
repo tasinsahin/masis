@@ -1,0 +1,75 @@
+#tblvariant .selected {
+	border: 2px solid #000 !important;
+	margin: 1px;
+	background: #000000 !important;
+	color:#fff;
+}
+#tblvariant .hover {
+	border-style:solid !important;
+	border-color:#FECE2F;
+	border:2px;
+	background:#fff;
+	margin: 1px;
+}
+#tblvariant .normal {
+	border: 2px solid #666666;
+	margin: 1px;
+}
+#tblvariant .soldOut {
+	border: 2px dotted #aaa;
+	background-color: #f5f5f5;
+	color: #AAAAAA;
+	margin: 1px;
+}
+#tblvariant .selectedSoldOut {
+	border:2px dotted #ff0000 !important;
+	background:#fff !important;
+	color:#aaaaaa;
+	margin:1px;
+}
+#tblvariant button, #tblvariant input {
+	display: inline-block;
+	padding:2px;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	margin: 1px;
+	cursor: pointer;
+	font-size:11px;
+	font-weight: bold;
+	color: #000;
+	background: #666;
+	border:2px solid #666;
+	-webkit-border-radius : 4px;
+	-moz-border-radius : 4px;
+	border-radius : 4px;
+}
+#tblvariant #sizes1 button {
+	width:28px;
+	text-align:center;
+}
+#tblvariant input {
+	height:25px !important;
+	width:25px !important;
+}
+#tblvariant #size0SelectorContent label {
+	display:inline !important;
+	font-weight:bold;
+}
+#tblvariant #size0SelectorContent p {
+	margin:5px 0;
+}
+#tblvariant #size1SelectorContent label {
+	display:inline !important;
+	font-weight:bold;
+}
+#tblvariant #size1SelectorContent p {
+	margin:5px 0;
+}
+#tblvariant #size2SelectorContent label {
+	display:inline !important;
+	font-weight:bold;
+}
+#tblvariant #size2SelectorContent p {
+	margin:5px 0;
+}

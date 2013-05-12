@@ -1,0 +1,85 @@
+﻿@model avizevimde.Areas.Tuketici.Models.tuketiciBanka
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Tuketici/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>tuketiciBanka</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tuketiciId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tuketiciId)
+            @Html.ValidationMessageFor(model => model.tuketiciId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.bankaId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bankaId)
+            @Html.ValidationMessageFor(model => model.bankaId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.bankaSubeId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bankaSubeId)
+            @Html.ValidationMessageFor(model => model.bankaSubeId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.hesapNumarasi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.hesapNumarasi)
+            @Html.ValidationMessageFor(model => model.hesapNumarasi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.eklenmeTarihi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.eklenmeTarihi)
+            @Html.ValidationMessageFor(model => model.eklenmeTarihi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.degistirilenId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.degistirilenId)
+            @Html.ValidationMessageFor(model => model.degistirilenId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.enYeni)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.enYeni)
+            @Html.ValidationMessageFor(model => model.enYeni)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

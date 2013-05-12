@@ -1,0 +1,51 @@
+﻿@model avizevimde.Areas.Tuketici.Models.sepet
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Tuketici/Views/Shared/_Layout";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>sepet</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tuketici.tuketiciAdi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tuketici.tuketiciAdi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.urunAdedi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.urunAdedi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.oda.resim)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.oda.resim)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eklenmeTarihi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.degistirmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.degistirmeTarihi)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,76 @@
+﻿@model IEnumerable<avizevimde.Areas.Montajci.Models.montajciLog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Montajci/Views/Shared/_Layout.cshtml";
+}
+            <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "MontajciAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Log", "Index", "MontajciLog")
+                        </li>
+                    </ul>
+            </div>
+			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-th"></i>Log</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+                  	<div class="row-fluid">
+                    <table>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.kaynak)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.zaman)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.olay)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.montajci.adi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.eklenmeTarihi)
+                            </th>
+                            <th></th>
+                        </tr>
+                    @foreach (var item in Model) {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.kaynak)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.zaman)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.olay)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.montajci.adi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.eklenmeTarihi)
+                            </td>
+                            <td> 
+                                @Html.ActionLink("Details", "Details", new { id=item.Id }) | 
+                            </td>
+                        </tr>
+                    }
+
+                    </table>  
+                  	</div>                   
+                  </div>
+				</div><!--/span-->
+			</div><!--/row-->
+

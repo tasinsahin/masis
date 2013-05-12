@@ -1,0 +1,90 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head id="head1">
+    <title>Anasayfa :</title>
+    <meta id="description" name="description" content="" />
+    <meta id="keywords" name="keywords" content="" />
+    <meta name="robots" content="INDEX,FOLLOW,NOODP,NOYDIR" />
+
+    <link rel="Stylesheet" type="text/css" href="~/Content/themes/default/css/reset.css" />
+    <link rel="Stylesheet" type="text/css" href="~/Content/themes/default/css/Portal.css" />
+    <link rel="Stylesheet" type="text/css" href="~/Content/themes/default/css/jquery-ui.css" />
+    <link rel="Stylesheet" type="text/css" href="~/Content/themes/default/css/ui-selectmenu.css" />
+    <link rel="Stylesheet" type="text/css" href="~/Content/themes/default/css/popup-modal.css" />
+</head>
+<body>
+    <div id="container">
+        <form name="Form1" action="" method="post" id="Form1">
+            <div> 
+            <script type="text/javascript" src="~/Content/themes/default/js/jquery.min.js"></script>
+            <script type="text/javascript" src="~/Content/themes/default/js/jquery-ui.min.js"></script>
+            <script type="text/javascript" src="~/Content/themes/default/js/ui.selectmenu.min.js"></script>
+            <script type="text/javascript" src="~/Content/themes/default/js/jquery-colorbox.min.js"></script>
+            <script type="text/javascript" src="~/Content/themes/default/js/global.js"></script>
+            <script type="text/javascript" src="~/Content/themes/default/js/jquery.cookie.min.js"></script>
+            <div id="header">
+                <div id="header_db">
+                    <div id="ctl02_header_db_content"></div>
+                </div>
+                <div id="header_content">
+                    <div id="user-menu" class="radius7"><a id="ctl02_rptCurrency_ctl00_lnkCurrency" title="TL" href="">TL</a><a href="#">|</a><a id="ctl02_rptCurrency_ctl01_lnkCurrency" title="USD" href="">$</a><a href="#">|</a><a id="ctl02_rptCurrency_ctl02_lnkCurrency" title="EURO" href="">EUR</a><a href="#">|</a></div>
+                    <div id="logo">
+                            <a href="@Url.Action("Index", "Home")"><img src="~/Content/themes/default/images/logo.png", alt="Edit" /></a>
+                    </div>
+                    <div id="user-menu" class="radius7">
+                        @Html.Partial("_UserPartial")
+                    </div>
+                    <div class="clear"></div>
+                    <div id="main-top"></div>
+                    <div id="top-menu">
+                        <div id="topmenu-categories">
+                            <div id="tc-right">
+                                <a href="#" class="main radius7">Tüm Kategoriler<span class="arrow"></span>
+                                </a> 
+                            </div>
+                        </div>
+                        <div id="topmenu-content">
+                            <div id="topmenu-search">
+                                <input name="txtSearch" type="text" id="txtSearch" title="Ürün Arama" class="search-fld"
+                                    onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {LigthSearchx('txtSearch','btnSearch');return false;}} else {return true}; "
+                                    onclick="this.value = '';" onblur="this.value=!this.value?'Ürün Arama':this.value;"
+                                    value="Ürün Arama" /><a id="btnSearch" class="search-btn" href="javascript:LigthSearchx('txtSearch','btnSearch');"></a>
+                                       @Html.ActionLink("Gelişmiş Arama", "GelismisArama", "Home", new { area = "" }, new { }) 
+                            </div>
+                            <div id="topmenu-line"></div>
+                            <div id="topmenu-cart">
+                                <img src="~/Content/themes/default/images/icon_cart.png" alt="sepet" border="0" />&nbsp;<a href="~/Content/store/cart.html">@Html.ActionLink("Sepetim", "Sepet", "Home") 
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="main">
+                @RenderSection("featured", required: false)
+                  <section class="content-wrapper main-content clear-fix">
+                @RenderBody()                
+                  </section>
+            </div>
+            <span id="lbllvl"></span>
+            <div id="footer">
+                <div id="footer_db">
+                    <div id="ctl03_footer_db_content"></div>
+                </div>
+                <div id="main-bottom"></div>
+                <div id="footer-content">
+                    <span class="social"><a href="#" target="_blank">
+                        <img src="~/Content/themes/default/images/icon_facebook.png" alt="" border="0" /></a><a href="#" target="_blank"><img src="~/Content/themes/default/images/icon_twitter.png" border="0" /></a></span><p>@Html.ActionLink("Kullanım Koşulları", "KullanimKosullari", "Home") |@Html.ActionLink("Gizlilik Politikası", "GizlilikPOlitikasi", "Home") </p>
+                    <p>Copyright © <b>demo.proticaret.org</b> Tüm Hakları Saklıdır.</p>
+                    <b>Adres:</b> Ferah Mah. Alemdağ Yanyolu Cad. Kasran Plaza No:24 K:1 D:3 Çamlıca Üsküdar-İstanbul<b>Telefon No:</b> 0216 344 37 17 <b>E-Posta:</b> info@proticaret.org
+                    <div id="ctl03_footer_ref" class="footer_ref"><span>Powered by </span><a title="eticaret" href="http://www.proticaret.net/" target="_blank">Proticaret</a></div>
+                </div>
+            </div> 
+            </div>
+        </form>
+    </div>
+</body>
+</html>

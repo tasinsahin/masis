@@ -1,0 +1,50 @@
+﻿@model avizevimde.Areas.Admin.Models.smsTuketici
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>smsMontajci</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tuketici.tuketiciAdi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tuketici.tuketiciAdi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.smsTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.smsTarihi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.smsNumara)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.smsNumara)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eklenmeTarihi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ekleyen.adminAdi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ekleyen.adminAdi)
+    </div> 
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

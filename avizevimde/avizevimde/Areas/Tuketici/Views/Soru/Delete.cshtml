@@ -1,0 +1,61 @@
+﻿@model avizevimde.Areas.Tuketici.Models.soru
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>soru</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tuketici.tuketiciAdi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tuketici.tuketiciAdi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.adi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.adi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.soyadi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.soyadi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.baslik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.baslik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.icerik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.icerik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eklenmeTarihi)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

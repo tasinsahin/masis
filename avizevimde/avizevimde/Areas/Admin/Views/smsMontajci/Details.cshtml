@@ -1,0 +1,65 @@
+﻿@model avizevimde.Areas.Admin.Models.smsMontajci
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>smsMontajci</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.montajciId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.montajciId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.smsTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.smsTarihi)
+    </div>
+
+            
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.baslik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.baslik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.icerik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.icerik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.smsNumara)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.smsNumara)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eklenmeTarihi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ekleyen.adminAdi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ekleyen.adminAdi)
+    </div> 
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

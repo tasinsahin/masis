@@ -1,0 +1,100 @@
+﻿@model avizevimde.Areas.Admin.Models.bankaSube
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    
+  <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Banka Şube", "Index", "BankaSube")<span class="divider">/</span>
+                        </li>  
+                        <li>
+                            @Html.ActionLink("Yeni", "Create", "BankaSube")
+                        </li>  
+                    </ul>
+            </div>
+    
+    
+     			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-edit"></i>Yeni Kayıt</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal">
+                        <fieldset>
+                            <legend>bankaSube</legend>
+                            
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.bankaId, "banka")
+                            </div>
+                            <div class="editor-field">
+                                @Html.DropDownList("bankaId", String.Empty)
+                                @Html.ValidationMessageFor(model => model.bankaId)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.bankaSubeAdi)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.bankaSubeAdi)
+                                @Html.ValidationMessageFor(model => model.bankaSubeAdi)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.bankaSubeCagriMerkeziTelefon)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.bankaSubeCagriMerkeziTelefon)
+                                @Html.ValidationMessageFor(model => model.bankaSubeCagriMerkeziTelefon)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.bankaSubeOzelTelefon)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.bankaSubeOzelTelefon)
+                                @Html.ValidationMessageFor(model => model.bankaSubeOzelTelefon)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.eklenmeTarihi)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.eklenmeTarihi)
+                                @Html.ValidationMessageFor(model => model.eklenmeTarihi)
+                            </div>
+                                                       
+                            <p>
+                                <input type="submit" value="Create" />
+                            </p>
+                        </fieldset>
+						</form>
+					</div>
+				</div><!--/span-->
+
+			</div><!--/row-->
+                            
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

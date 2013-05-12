@@ -1,0 +1,35 @@
+﻿@model avizevimde.Areas.Tuketici.Models.fiyatDuserse
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Uretici/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>fiyatDuserse</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.urun.alt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.urun.alt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eklenmeTarihi)
+    </div>
+          @Html.HiddenFor(model => model.tuketiciId)
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

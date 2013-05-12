@@ -1,0 +1,165 @@
+﻿@model avizevimde.Areas.Uretici.Models.urun
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Uretici/Views/Shared/_Layout.cshtml";
+}
+
+         			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-edit"></i>Ürün Detay</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal">
+
+                        <fieldset>
+                            <legend>urun</legend>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.marka.tanim)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.marka.tanim)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.kategori.aciklama)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.kategori.aciklama)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.alt)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.alt)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.aramaBilgileri)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.aramaBilgileri)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.renk.adi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.renk.adi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.agirlik)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.agirlik)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.tanitim)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.tanitim)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.resim1)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.resim1)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.resim2)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.resim2)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.resim3)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.resim3)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.yayinlansin)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.yayinlansin)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.eklenmeTarihi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.eklenmeTarihi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.uretici.ureticiAdi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.uretici.ureticiAdi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.fiyat)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.fiyat)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.taksit.kartAdi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.taksit.kartAdi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.vergi.Id)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.vergi.Id)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.adminOnayVerdi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.adminOnayVerdi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.kargoDahil)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.kargoDahil)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.montajDahil)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.montajDahil)
+                            </div>
+                        </fieldset>
+						</form>
+					</div>
+				</div><!--/span-->
+
+			</div><!--/row-->
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

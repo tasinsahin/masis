@@ -1,0 +1,124 @@
+﻿@model IEnumerable<avizevimde.Areas.Tuketici.Models.tuketiciAdres>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Tuketici/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tuketiciId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sehirId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ilceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.semtId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mahalleId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cadde)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sokak)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numara)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.enlem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.boylam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adresAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adresFatura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adresTeslimat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EklenmeTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.degistirilenId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.enYeni)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tuketiciId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sehirId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ilceId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.semtId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mahalleId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cadde)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sokak)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numara)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.enlem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.boylam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adresAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adresFatura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adresTeslimat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EklenmeTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.degistirilenId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.enYeni)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

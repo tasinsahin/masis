@@ -1,0 +1,117 @@
+﻿@model avizevimde.Models.yardim
+
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+ <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td id="center" valign="top">
+                <div id="center_top">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr></tr>
+                    </table>
+                </div>
+                <div id="center_middle">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td id="middle_left" valign="top">
+                                <div id="dynamicform" class="module">
+                                    <div id="module_content">
+                                        <div id="module_title">
+                                            <span><span id="module_title_icon"></span>Bize Sorun</span>
+                                        </div>
+                                        <div>
+                                            <div id="ctl05_formdiv">                          
+                                            <div class="editor-label">
+                                                @Html.LabelFor(model => model.adi)
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.EditorFor(model => model.adi)
+                                                @Html.ValidationMessageFor(model => model.adi)
+                                            </div>                                              
+                                            <div class="editor-label">
+                                                @Html.LabelFor(model => model.soyAdi)
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.EditorFor(model => model.soyAdi)
+                                                @Html.ValidationMessageFor(model => model.soyAdi)
+                                            </div>                           
+                                            <div class="editor-label">
+                                                @Html.LabelFor(model => model.Eposta)
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.EditorFor(model => model.Eposta)
+                                                @Html.ValidationMessageFor(model => model.Eposta)
+                                            </div>      
+                                            <div class="editor-label">
+                                                @Html.LabelFor(model => model.sorun)
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.EditorFor(model => model.sorun)
+                                                @Html.ValidationMessageFor(model => model.sorun)
+                                            </div>   
+                                            <p>
+                                                <input type="submit" value="Create" />
+                                            </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td id="middle_center" valign="top">
+                                <div id="faq" class="module">
+                                    <div id="module_content">
+                                        <div id="module_title">
+                                            <span><span id="module_title_icon"></span>Sıkça Sorulan Sorular</span>
+                                        </div>
+                                        <div>
+                                            <dl id="faq">
+                                                <dt>Üye olmadan alışveriş yapabilir miyim ?</dt>
+                                                <dd>
+                                                    <div class="answer">Evet &uuml;ye olmadan alışveriş yapabilirsiniz.</div>
+                                                </dd>
+                                                <dt>Üye olmak ücretli midir?</dt>
+                                                <dd>
+                                                    <div class="answer">Sitemize Üyelik ücretsizdir.</div>
+                                                </dd>
+                                                <dt>Şifremi unutum, ne yapmalıyım?</dt>
+                                                <dd>
+                                                    <div class="answer">Şifrenizi mail adresinize g&ouml;ndermek i&ccedil;in <a href="../password.html">şifremi unuttum</a> sayfamızı kullanabilirsiniz.</div>
+                                                </dd>
+                                                <dt>Siparişim kaç gün içersinde elime ulaşır?</dt>
+                                                <dd>
+                                                    <div class="answer">Siparişleriniz ortalama 7 iş günü içerisinde elinize ulamış olur.</div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#faq').find('dd').hide().end().find('dt').click(function() {
+                                            var answer = $(this).next();
+                                            if (answer.is(':visible')) {
+                                                answer.slideUp();
+                                            } else {
+                                                answer.slideDown('slow');
+                                            }
+                                        });
+                                    });
+                                </script>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="center_bottom">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr></tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+}

@@ -1,0 +1,159 @@
+﻿@model avizevimde.Areas.Tuketici.Models.tuketiciAdres
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Tuketici/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>tuketiciAdres</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tuketiciId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tuketiciId)
+            @Html.ValidationMessageFor(model => model.tuketiciId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sehirId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sehirId)
+            @Html.ValidationMessageFor(model => model.sehirId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ilceId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ilceId)
+            @Html.ValidationMessageFor(model => model.ilceId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.semtId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.semtId)
+            @Html.ValidationMessageFor(model => model.semtId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mahalleId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mahalleId)
+            @Html.ValidationMessageFor(model => model.mahalleId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cadde)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cadde)
+            @Html.ValidationMessageFor(model => model.cadde)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sokak)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sokak)
+            @Html.ValidationMessageFor(model => model.sokak)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.numara)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.numara)
+            @Html.ValidationMessageFor(model => model.numara)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.enlem)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.enlem)
+            @Html.ValidationMessageFor(model => model.enlem)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.boylam)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.boylam)
+            @Html.ValidationMessageFor(model => model.boylam)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.adresAdi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.adresAdi)
+            @Html.ValidationMessageFor(model => model.adresAdi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.adresFatura)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.adresFatura)
+            @Html.ValidationMessageFor(model => model.adresFatura)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.adresTeslimat)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.adresTeslimat)
+            @Html.ValidationMessageFor(model => model.adresTeslimat)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EklenmeTarihi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EklenmeTarihi)
+            @Html.ValidationMessageFor(model => model.EklenmeTarihi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.degistirilenId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.degistirilenId)
+            @Html.ValidationMessageFor(model => model.degistirilenId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.enYeni)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.enYeni)
+            @Html.ValidationMessageFor(model => model.enYeni)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,96 @@
+﻿@model IEnumerable<avizevimde.Areas.Uretici.Models.uretici>
+
+@{
+    ViewBag.Title = "Index";
+}
+     <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Uretici", "Index", "AdminUretici")  
+                    </ul>
+            </div>
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.adi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ureticiAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ureticiTanim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ureticiTelefon1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ureticiTelefon2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ureticiCepTelefonu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ureticiEpostaAdresi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ozelTasarimYapiyor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eklenmeTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.degistirmeTarihi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.adi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ureticiAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ureticiTanim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ureticiTelefon1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ureticiTelefon2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ureticiCepTelefonu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ureticiEpostaAdresi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ozelTasarimYapiyor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eklenmeTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.degistirmeTarihi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

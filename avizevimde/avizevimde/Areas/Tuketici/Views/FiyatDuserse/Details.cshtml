@@ -1,0 +1,31 @@
+﻿@model avizevimde.Areas.Tuketici.Models.fiyatDuserse
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Uretici/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>fiyatDuserse</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.urun.alt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.urun.alt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eklenmeTarihi)
+    </div>
+          @Html.HiddenFor(model => model.tuketiciId)
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

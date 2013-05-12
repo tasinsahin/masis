@@ -1,0 +1,69 @@
+﻿@model avizevimde.Areas.Admin.Models.LoginModel
+@{
+    ViewBag.Title = "UyeGirisi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td id="center" valign="top">
+                <div id="center_top">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr></tr>
+                    </table>
+                </div>
+                <div id="center_middle">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td id="middle_center" valign="top">
+                                <div id="login" class="module">
+                                    <div id="module_content">
+                                        <div id="module_title">
+                                            <span><span id="module_title_icon"></span>Üye Girişi</span>
+                                        </div>
+                                        <div id="ctl04_login_form">
+                                            <fieldset>
+                                            <legend></legend>
+                                            <ol>
+                                                <li>
+                                                    @Html.LabelFor(m => m.UserName)
+                                                    @Html.TextBoxFor(m => m.UserName)
+                                                    @Html.ValidationMessageFor(m => m.UserName)
+                                                </li>
+                                                <li>
+                                                    @Html.LabelFor(m => m.Password)
+                                                    @Html.PasswordFor(m => m.Password)
+                                                    @Html.ValidationMessageFor(m => m.Password)
+                                                </li>
+                                                <li>
+                                                    @Html.CheckBoxFor(m => m.RememberMe)
+                                                    @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                                                </li>
+                                            </ol>
+                                            <input type="submit" value="Log in" />
+                                        </fieldset>
+                                        <p>
+                                            @Html.ActionLink("Şifremi Unuttum", "ForgotPassword") Şifrenizi Unuttuysanız..
+                                        </p>
+                                        <p>
+                                            @Html.ActionLink("Üye Ol", "Register") Üye Değilseniz..
+                                        </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="center_bottom">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr></tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+}

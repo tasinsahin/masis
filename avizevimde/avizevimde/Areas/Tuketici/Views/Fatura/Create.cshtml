@@ -1,0 +1,78 @@
+﻿@model avizevimde.Areas.Tuketici.Models.tuketiciFatura
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Tuketici/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>tuketiciFatura</legend>
+        @Html.HiddenFor(Model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.adresId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.adresId)
+            @Html.ValidationMessageFor(model => model.adresId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.vergiDairesiId, "vergiDairesi")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("vergiDairesiId", String.Empty)
+            @Html.ValidationMessageFor(model => model.vergiDairesiId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.vergiNumarasi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.vergiNumarasi)
+            @Html.ValidationMessageFor(model => model.vergiNumarasi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.eklenmeTarihi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.eklenmeTarihi)
+            @Html.ValidationMessageFor(model => model.eklenmeTarihi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.degistirilenId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.degistirilenId)
+            @Html.ValidationMessageFor(model => model.degistirilenId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.enYeni)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.enYeni)
+            @Html.ValidationMessageFor(model => model.enYeni)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

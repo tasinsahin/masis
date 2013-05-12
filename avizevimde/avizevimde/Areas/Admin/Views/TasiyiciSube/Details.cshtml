@@ -1,0 +1,153 @@
+﻿@model avizevimde.Areas.Admin.Models.tasiyiciSube
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+                                <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Taşıyıcı Şube", "Index", "TasiyiciSube")<span class="divider">/</span>
+                        </li>  
+                        <li>
+                            @Html.ActionLink("Detaylar", "Details", "TasiyiciSube")
+                        </li>  
+                    </ul>
+            </div>
+
+
+ 			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-edit"></i>Taşıyıcı Şube Detaylar</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal">
+                        <h2>Details</h2>
+
+                        <fieldset>
+                            <legend>tasiyiciSube</legend>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.subeAdi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.subeAdi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.sehir.sehirAdi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.sehir.sehirAdi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.ilce.ilceAdi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.ilce.ilceAdi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.semt.semtAdı)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.semt.semtAdı)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.mahalle.mahalleAdi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.mahalle.mahalleAdi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.cadde)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.cadde)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.sokak)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.sokak)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.numara)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.numara)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.faturaAdresi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.faturaAdresi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.enlem)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.enlem)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.boylam)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.boylam)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.eklenmeTarihi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.eklenmeTarihi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.ekleyen.adminAdi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.ekleyen.adminAdi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.degistirmeTarihi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.degistirmeTarihi)
+                            </div>
+
+                            <div class="display-label">
+                                 @Html.DisplayNameFor(model => model.degistiren.adminAdi)
+                            </div>
+                            <div class="display-field">
+                                @Html.DisplayFor(model => model.degistiren.adminAdi)
+                            </div>
+                        </fieldset>
+                        <p>
+                            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                            @Html.ActionLink("Back to List", "Index")
+                        </p>
+						</form>
+					</div>
+				</div><!--/span-->
+
+			</div><!--/row-->

@@ -1,0 +1,198 @@
+﻿@model avizevimde.Areas.Uretici.Models.urun
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Uretici/Views/Shared/_Layout.cshtml";
+}
+
+                    @using (Html.BeginForm()) {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+
+         			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-edit"></i>Ürün Düzenle</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal">
+                        <fieldset>
+                            <legend>urun</legend>
+
+                            @Html.HiddenFor(model => model.Id)
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.markaId, "marka")
+                            </div>
+                            <div class="editor-field">
+                                @Html.DropDownList("markaId", String.Empty)
+                                @Html.ValidationMessageFor(model => model.markaId)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.kategoriId, "kategori")
+                            </div>
+                            <div class="editor-field">
+                                @Html.DropDownList("kategoriId", String.Empty)
+                                @Html.ValidationMessageFor(model => model.kategoriId)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.alt)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.alt)
+                                @Html.ValidationMessageFor(model => model.alt)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.aramaBilgileri)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.aramaBilgileri)
+                                @Html.ValidationMessageFor(model => model.aramaBilgileri)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.renkId, "renk")
+                            </div>
+                            <div class="editor-field">
+                                @Html.DropDownList("renkId", String.Empty)
+                                @Html.ValidationMessageFor(model => model.renkId)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.agirlik)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.agirlik)
+                                @Html.ValidationMessageFor(model => model.agirlik)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.tanitim)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.tanitim)
+                                @Html.ValidationMessageFor(model => model.tanitim)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.resim1)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.resim1)
+                                @Html.ValidationMessageFor(model => model.resim1)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.resim2)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.resim2)
+                                @Html.ValidationMessageFor(model => model.resim2)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.resim3)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.resim3)
+                                @Html.ValidationMessageFor(model => model.resim3)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.yayinlansin)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.yayinlansin)
+                                @Html.ValidationMessageFor(model => model.yayinlansin)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.eklenmeTarihi)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.eklenmeTarihi)
+                                @Html.ValidationMessageFor(model => model.eklenmeTarihi)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.ureticiId, "uretici")
+                            </div>
+                            <div class="editor-field">
+                                @Html.DropDownList("ureticiId", String.Empty)
+                                @Html.ValidationMessageFor(model => model.ureticiId)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.fiyat)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.fiyat)
+                                @Html.ValidationMessageFor(model => model.fiyat)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.taksitId, "taksit")
+                            </div>
+                            <div class="editor-field">
+                                @Html.DropDownList("taksitId", String.Empty)
+                                @Html.ValidationMessageFor(model => model.taksitId)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.vergiId, "vergi")
+                            </div>
+                            <div class="editor-field">
+                                @Html.DropDownList("vergiId", String.Empty)
+                                @Html.ValidationMessageFor(model => model.vergiId)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.adminOnayVerdi)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.adminOnayVerdi)
+                                @Html.ValidationMessageFor(model => model.adminOnayVerdi)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.kargoDahil)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.kargoDahil)
+                                @Html.ValidationMessageFor(model => model.kargoDahil)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.montajDahil)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.montajDahil)
+                                @Html.ValidationMessageFor(model => model.montajDahil)
+                            </div>
+
+                            <p>
+                                <input type="submit" value="Save" />
+                            </p>
+                        </fieldset>
+						</form>
+					</div>
+				</div><!--/span-->
+
+			</div><!--/row-->
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

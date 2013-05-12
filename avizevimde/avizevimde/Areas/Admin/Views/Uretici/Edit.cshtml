@@ -1,0 +1,107 @@
+﻿@model avizevimde.Areas.Uretici.Models.uretici
+
+@{
+    ViewBag.Title = "Edit";
+}
+     <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Uretici", "Index", "AdminUretici")<span class="divider">/</span>
+                        </li>  
+                        <li>
+                            @Html.ActionLink("Düzenle", "Edit", "AdminUretici")
+                        </li>  
+                    </ul>
+            </div>
+
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>uretici</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.adi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.adi)
+            @Html.ValidationMessageFor(model => model.adi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ureticiAdi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ureticiAdi)
+            @Html.ValidationMessageFor(model => model.ureticiAdi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ureticiTanim)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ureticiTanim)
+            @Html.ValidationMessageFor(model => model.ureticiTanim)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ureticiTelefon1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ureticiTelefon1)
+            @Html.ValidationMessageFor(model => model.ureticiTelefon1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ureticiTelefon2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ureticiTelefon2)
+            @Html.ValidationMessageFor(model => model.ureticiTelefon2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ureticiCepTelefonu)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ureticiCepTelefonu)
+            @Html.ValidationMessageFor(model => model.ureticiCepTelefonu)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ureticiEpostaAdresi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ureticiEpostaAdresi)
+            @Html.ValidationMessageFor(model => model.ureticiEpostaAdresi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ozelTasarimYapiyor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ozelTasarimYapiyor)
+            @Html.ValidationMessageFor(model => model.ozelTasarimYapiyor)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

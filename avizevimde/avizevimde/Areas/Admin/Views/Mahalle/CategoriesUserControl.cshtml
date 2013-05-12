@@ -1,0 +1,14 @@
+﻿@model avizevimde.Areas.Admin.Models.productCatalog
+@using (Ajax.BeginForm("SelectCategory", "CascadingDropDown", new AjaxOptions { UpdateTargetId = "altkategoris" }))
+{ 
+    @Html.DropDownListFor(
+            m => m.SelectedCategoryId,
+            new SelectList(Model.kategoris, "Id", "adi"),
+           string.Empty
+        )
+}
+<script type="text/javascript">
+    $('#SelectedCategoryId').change(function () {
+        $(this).parents('form').submit();
+    });
+</script>

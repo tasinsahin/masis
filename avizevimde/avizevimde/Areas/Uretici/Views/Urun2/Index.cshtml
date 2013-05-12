@@ -1,0 +1,128 @@
+﻿@model IEnumerable<avizevimde.Areas.Uretici.Models.urun2>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Uretici/Views/Shared/_Layout.cshtml";
+}
+
+
+			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-th"></i>Ürün</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+                  	<div class="row-fluid">
+                    <p>
+                        @Html.ActionLink("Create New", "Create")
+                    </p>
+                    <table>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.adi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.aciklamasi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.url)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.stokAdedi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.izlenmeSayisi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.alt)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.seo)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.eklenmeTarihi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ekleyenId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.degistirmeTarihi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.degistirenId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.fiyat)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.urunBilgileriDegistirilenId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.urunBilgileriDegistirlenEnYeni)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                    @foreach (var item in Model) {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.adi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.aciklamasi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.url)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.stokAdedi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.izlenmeSayisi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.alt)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.seo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.eklenmeTarihi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ekleyenId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.degistirmeTarihi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.degistirenId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.fiyat)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.urunBilgileriDegistirilenId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.urunBilgileriDegistirlenEnYeni)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                            </td>
+                        </tr>
+                    }
+
+                    </table>
+                    </div>                   
+                  </div>
+				</div><!--/span-->
+			</div><!--/row-->
+

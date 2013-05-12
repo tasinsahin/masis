@@ -1,0 +1,90 @@
+﻿@model IEnumerable<avizevimde.Areas.Montajci.Models.montajci>
+
+@{
+    ViewBag.Title = "Index";
+}
+                                <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Montajcı", "Index", "Montajci")
+                    </ul>
+            </div>
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.adi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.montajciAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.montajciTanim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.montajciTelefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.montajciTelefon2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.montajciCepTelefonu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.montajciEpostaAdresi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eklenmeTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.degistirmeTarihi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.adi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.montajciAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.montajciTanim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.montajciTelefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.montajciTelefon2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.montajciCepTelefonu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.montajciEpostaAdresi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eklenmeTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.degistirmeTarihi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

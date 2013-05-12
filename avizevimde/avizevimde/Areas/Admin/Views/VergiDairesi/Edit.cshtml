@@ -1,0 +1,78 @@
+﻿@model avizevimde.Areas.Admin.Models.vergiDairesi
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+                    @using (Html.BeginForm()) {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                            <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Vergi Dairesi", "Index", "VergiDairesi")<span class="divider">/</span>
+                        </li>  
+                        <li>
+                            @Html.ActionLink("Düzenle", "Edit", "VergiDairesi")
+                        </li>  
+                    </ul>
+            </div>
+ 			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-edit"></i> Vergi Dairesi Düzenle</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal">
+
+
+                        <fieldset>
+                            <legend>vergiDairesi</legend>
+
+                            @Html.HiddenFor(model => model.Id)
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.adi)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.adi)
+                                @Html.ValidationMessageFor(model => model.adi)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.ilce)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.ilce.ilceAdi)
+                                @Html.ValidationMessageFor(model => model.ilce.ilceAdi)
+                            </div>
+
+
+                            <p>
+                                <input type="submit" value="Save" />
+                            </p>
+                        </fieldset>
+						</form>
+					</div>
+				</div><!--/span-->
+
+			</div><!--/row-->
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

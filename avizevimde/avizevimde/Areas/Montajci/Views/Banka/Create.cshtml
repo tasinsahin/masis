@@ -1,0 +1,115 @@
+﻿@model avizevimde.Areas.Montajci.Models.MontajciBanka
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Montajci/Views/Shared/_Layout.cshtml";
+}
+
+            <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "MontajciAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Banka", "Index", "MontajciBanka")<span class="divider">/</span>
+                        </li>    
+                        <li>
+                            @Html.ActionLink("Yeni", "Create", "MontajciBanka")
+                        </li>  
+                    </ul>
+            </div>   
+
+                    @using (Html.BeginForm()) {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+         			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-edit"></i> Montajci Yeni Kayit</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal">
+
+
+                        <fieldset>
+                            <legend>MontajciBanka</legend>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.montajciId)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.montajciId)
+                                @Html.ValidationMessageFor(model => model.montajciId)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.bankaId)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.bankaId)
+                                @Html.ValidationMessageFor(model => model.bankaId)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.bankaSubeId)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.bankaSubeId)
+                                @Html.ValidationMessageFor(model => model.bankaSubeId)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.hesapNumarasi)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.hesapNumarasi)
+                                @Html.ValidationMessageFor(model => model.hesapNumarasi)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.eklenmeTarihi)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.eklenmeTarihi)
+                                @Html.ValidationMessageFor(model => model.eklenmeTarihi)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.degistirilenId)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.degistirilenId)
+                                @Html.ValidationMessageFor(model => model.degistirilenId)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.enYeni)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.enYeni)
+                                @Html.ValidationMessageFor(model => model.enYeni)
+                            </div>
+
+                            <p>
+                                <input type="submit" value="Create" />
+                            </p>
+                        </fieldset>
+						</form>
+					</div>
+				</div><!--/span-->
+
+			</div><!--/row-->
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,33 @@
+﻿@if (Request.IsAuthenticated) {
+    
+        @Html.ActionLink("Anasayfa","Index","Home", new {area="" }, new { })
+        <a href="#">|</a>
+        @Html.ActionLink("Hesabım","Hesabim", "Account", new { area ="Tuketici"}, new { })        <a href="#">|</a>
+        @Html.ActionLink("Çıkış", "LogOff", "Account",new { area ="Tuketici"}, new { })        <a href="#">|</a>
+        @Html.ActionLink("Yardım","Yardim","Home", new {area="" }, new { })        <a href="#">|</a>
+        @Html.ActionLink("İletişim","Iletisim","Home", new { area=""}, new { })
+        <div class="flags radius7">
+            Dil Seçiniz: <a href="indexb065.html?lang=tr-TR">
+                <img alt="tr" src="~/Content/themes/default/images/flag/tr.png" /></a>
+            <a href="index4cda.html?lang=en-US"><img alt="en" src="~/Content/themes/default/images/flag/us.png" /></a>
+        </div>
+        <div class="clear"></div>
+ 
+    
+} else {
+        {
+            Layout = null;
+        }
+        @Html.ActionLink("Anasayfa","Index","Home", new {area="" }, new { })
+        <a href="#">|</a>
+        @Html.ActionLink("Üye Girişi","Login", "Account", new { area ="Tuketici"}, new { })        <a href="#">|</a>
+        @Html.ActionLink("Üye Ol", "Register", "Account", new { area ="Tuketici"}, new { })        <a href="#">|</a>
+        @Html.ActionLink("Yardım","Yardim","Home", new {area="" }, new { })        <a href="#">|</a>
+        @Html.ActionLink("İletişim","Iletisim","Home", new { area=""}, new { })
+        <div class="flags radius7">
+            Dil Seçiniz: <a href="indexb065.html?lang=tr-TR">
+                <img alt="tr" src="~/Content/themes/default/images/flag/tr.png" /></a>
+            <a href="index4cda.html?lang=en-US"><img alt="en" src="~/Content/themes/default/images/flag/us.png" /></a>
+        </div>
+        <div class="clear"></div>
+}

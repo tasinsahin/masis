@@ -1,0 +1,58 @@
+﻿$(function() {
+$(".transferbutton").button({icons:{primary:'ui-icon-transfer-e-w'}});
+$(".savebutton").button({icons:{primary:'ui-icon-disk'}});
+$(".addbutton").button({icons:{primary:'ui-icon-plus'}});
+$(".deletebutton").button({icons:{primary:'ui-icon-close'}});
+$(".editbutton").button({icons:{primary:'ui-icon-pencil'}});
+$(".settingsbutton").button({icons:{primary:'ui-icon-gear'}});
+$(".newwinbutton").button({icons:{primary:'ui-icon-newwin'}});
+$(".searchbutton").button({icons:{primary:'ui-icon-search'}});
+$(".cartbutton").button({icons:{primary:'ui-icon-cart'}});
+$(".cartbutton2").button({icons:{primary:'ui-icon-cart'}});
+$(".notebutton").button({icons:{primary:'ui-icon-note'}});
+$(".buybutton").button({icons:{primary:'ui-icon-circle-check'}});
+$(".arrowreturn",this).addClass('ui-icon ui-icon-arrowreturn-1-e');
+$(".button").button();
+$("#module",this).addClass('ui-widget');
+$("div#module_content",this).addClass('ui-widget-content ui-corner-all');
+$("#module_title",this).addClass('ui-widget-header ui-corner-all');
+$("#module_title_icon",this).addClass('ui-icon ui-icon-triangle-1-e');	
+$("div.module a",this).addClass('ui-priority-primary');
+$("div.module_box").addClass('ui-widget-content ui-corner-all');
+$("div.alert").addClass('ui-state-error ui-corner-all');
+$("div.information").addClass('ui-state-highlight ui-corner-all');
+$(".pagingprev a").button({icons:{primary:'ui-icon-circle-arrow-w'},text: false});
+$(".pagingitem a").button();
+$(".pagingselected a").button().addClass('ui-state-active');
+$(".pagingnext a").button({icons:{primary:'ui-icon-circle-arrow-e'},text: false});
+});
+
+var prm = Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function() {
+$(".transferbutton").button({icons:{primary:'ui-icon-transfer-e-w'}});
+$(".savebutton").button({icons:{primary:'ui-icon-disk'}});
+$(".addbutton").button({icons:{primary:'ui-icon-plus'}});
+$(".deletebutton").button({icons:{primary:'ui-icon-close'}});
+$(".editbutton").button({icons:{primary:'ui-icon-pencil'}});
+$(".settingsbutton").button({icons:{primary:'ui-icon-gear'}});
+$(".newwinbutton").button({icons:{primary:'ui-icon-newwin'}});
+$(".searchbutton").button({icons:{primary:'ui-icon-search'}});
+$(".cartbutton").button({icons:{primary:'ui-icon-cart'}});
+$(".cartbutton2").button({icons:{primary:'ui-icon-cart'}});
+$(".notebutton").button({icons:{primary:'ui-icon-note'}});
+$(".buybutton").button({icons:{primary:'ui-icon-circle-check'}});
+$(".arrowreturn",this).addClass('ui-icon ui-icon-arrowreturn-1-e');
+$(".button").button();	
+$("#module",this).addClass('ui-widget');
+$("div#module_content",this).addClass('ui-widget-content ui-corner-all');
+$("#module_title",this).addClass('ui-widget-header ui-corner-all');
+$("#module_title_icon",this).addClass('ui-icon ui-icon-triangle-1-e');	
+$("div.module a",this).addClass('ui-priority-primary');
+$("div.module_box").addClass('ui-widget-content ui-corner-all');
+$("div.alert").addClass('ui-state-error ui-corner-all');
+$("div.information").addClass('ui-state-highlight ui-corner-all');
+$(".pagingprev a").button({icons:{primary:'ui-icon-circle-arrow-w'},text: false});
+$(".pagingitem a").button();
+$(".pagingselected a").button().addClass('ui-state-active');
+$(".pagingnext a").button({icons:{primary:'ui-icon-circle-arrow-e'},text: false});
+});
+ 

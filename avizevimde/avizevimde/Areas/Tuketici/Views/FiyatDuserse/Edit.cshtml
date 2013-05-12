@@ -1,0 +1,48 @@
+﻿@model avizevimde.Areas.Tuketici.Models.fiyatDuserse
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Uretici/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>fiyatDuserse</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.urunId, "urun")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("urunId", String.Empty)
+            @Html.ValidationMessageFor(model => model.urunId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.eklenmeTarihi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.eklenmeTarihi)
+            @Html.ValidationMessageFor(model => model.eklenmeTarihi)
+        </div>
+          @Html.HiddenFor(model => model.tuketiciId)
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

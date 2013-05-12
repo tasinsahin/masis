@@ -1,0 +1,94 @@
+﻿@model avizevimde.Areas.Montajci.Models.montajci
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+                                <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Montajcı", "Index", "Montajci")<span class="divider">/</span>
+                        </li>  
+                        <li>
+                            @Html.ActionLink("Sil", "Delete", "Renk")
+                        </li>  
+                    </ul>
+            </div>
+
+            <h3>Are you sure you want to delete this?</h3>
+            <fieldset>
+                <legend>montajci</legend>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.adi)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.adi)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.montajciAdi)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.montajciAdi)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.montajciTanim)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.montajciTanim)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.montajciTelefon)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.montajciTelefon)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.montajciTelefon2)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.montajciTelefon2)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.montajciCepTelefonu)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.montajciCepTelefonu)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.montajciEpostaAdresi)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.montajciEpostaAdresi)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.eklenmeTarihi)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.eklenmeTarihi)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.degistirmeTarihi)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.degistirmeTarihi)
+                </div>
+            </fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,126 @@
+﻿@{
+    ViewBag.Title = "GelismisArama";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td id="center" valign="top">
+            <div id="center_top">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr></tr>
+                </table>
+            </div>
+            <div id="center_middle">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td id="middle_center" valign="top">
+                            <div id="productsearchfilter" class="module">
+                                <div id="module_content">
+                                    <div id="module_title">
+                                        <span><span id="module_title_icon"></span>Product Search</span>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function SearchFilter() {
+                                            var txt = document.getElementById('ctl04_txtSearch');
+                                            var Cat = document.getElementById('ctl04_ddlCategories');
+                                            var Mark = document.getElementById('ctl04_ddlMarks');
+                                            var P1 = document.getElementById('ctl04_txtPrice1');
+                                            var P2 = document.getElementById('ctl04_txtPrice2');
+                                            var url = 'ProductSearch.aspx?';
+                                            var btn = document.getElementById('ctl04_lnkWord');
+                                            var cName = document.getElementById('ctl04_chkName');
+                                            var cDetails = document.getElementById('ctl04_chkDetails');                                            url = url + 'value=' + txt.value                                            if (Cat != null) {
+                                                var CatId = Cat.options[Cat.selectedIndex].value;
+                                                url = url + '&CatId=' + CatId
+                                            }
+                                            if (Mark != null) {
+                                                var MarkId = Mark.options[Mark.selectedIndex].value;
+                                                url = url + '&MarkId=' + MarkId
+                                            }
+                                            if (P1 != null) {
+                                                url = url + '&P1=' + P1.value
+                                            }
+                                            if (P2 != null) {
+                                                url = url + '&P2=' + P2.value
+                                            }
+                                            if (cDetails.checked) {
+                                                url = url + '&Details=True'
+                                            }
+                                            if (cName.checked) {
+                                                url = url + '&Name=True'
+                                            }
+                                            else {
+                                                url = url + '&Name=False'
+                                            }
+                                            document.location.href = url;
+                                        }</script>
+                                    <div>
+                                        <table cellspacing="0" cellpadding="3" width="100%" border="0">
+                                            <tr>
+                                                <td align="right" width="40%">Category :</td>
+                                                <td width="60%">
+                                                    <select name="ctl04$ddlCategories" id="ctl04_ddlCategories">
+                                                        <option value="-1">-All Categories-</option>
+                                                        <option value="129">Giyim</option>
+                                                        <option value="102">Telefon</option>
+                                                        <option value="101">Bilgisayar</option>
+                                                        <option value="103">Elektronik</option>
+                                                        <option value="110">Foto &amp; Kamera</option>
+                                                        <option value="119">Saat</option>
+                                                        <option value="128">Bah&#231;e &amp; Hırdavat</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">Brand :</td>
+                                                <td>
+                                                    <select name="ctl04$ddlMarks" id="ctl04_ddlMarks">
+                                                        <option value="0">--Select--</option>
+                                                        <option value="103">APPLE</option>
+                                                        <option value="110">Bosch</option>
+                                                        <option value="108">CHRONE</option>
+                                                        <option value="107">FUJİFİLM</option>
+                                                        <option value="100">HP</option>
+                                                        <option value="109">POLAND</option>
+                                                        <option value="106">SAMSUNG</option>
+                                                        <option value="104">SİEMENS</option>
+                                                        <option value="105">SONY</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">Price Range :</td>
+                                                <td>
+                                                    <input name="ctl04$txtPrice1" type="text" id="ctl04_txtPrice1" onchange="NumericBox_FindItem('ctl04_txtPrice1').OnTextChange(this);" />&nbsp;<span id="ctl04_Label4">TRY</span>&nbsp;<span id="ctl04_Label6">with</span>&nbsp;
+                                                            <input name="ctl04$txtPrice2" type="text" id="ctl04_txtPrice2" onchange="NumericBox_FindItem('ctl04_txtPrice2').OnTextChange(this);" />&nbsp;<span id="ctl04_Label5">TRY</span>&nbsp;<span id="ctl04_Label7">Between</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">Search Text :</td>
+                                                <td>
+                                                    <input name="ctl04$txtSearch" type="text" maxlength="32" id="ctl04_txtSearch" onkeypress=" if (event.keyCode==13) SearchFilter();" /></td>
+                                            </tr>
+                                            <tr style="display: none; visibility: hidden;">
+                                                <td colspan="2">
+                                                    <input id="ctl04_chkName" type="checkbox" name="ctl04$chkName" checked="checked" />
+                                                    Search in Names
+                                                            <input id="ctl04_chkDetails" type="checkbox" name="ctl04$chkDetails" />
+                                                    Search in Details</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td align="left"><a id="ctl04_lnkWord" class="searchbutton" href="javascript:SearchFilter();">Search</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="center_bottom">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr></tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>

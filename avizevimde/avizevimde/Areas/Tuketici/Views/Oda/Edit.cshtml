@@ -1,0 +1,79 @@
+﻿@model avizevimde.Areas.Tuketici.Models.oda
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Tuketici/Views/Shared/_Layout";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>oda</legend>
+
+        @Html.HiddenFor(model => model.Id)
+         
+        <div class="editor-label">
+            @Html.LabelFor(model => model.resim)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.resim)
+            @Html.ValidationMessageFor(model => model.resim)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.resimAdi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.resimAdi)
+            @Html.ValidationMessageFor(model => model.resimAdi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.odaAlani)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.odaAlani)
+            @Html.ValidationMessageFor(model => model.odaAlani)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.odaYukseklik)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.odaYukseklik)
+            @Html.ValidationMessageFor(model => model.odaYukseklik)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.eklenmeTarihi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.eklenmeTarihi)
+            @Html.ValidationMessageFor(model => model.eklenmeTarihi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.degistirmeTarihi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.degistirmeTarihi)
+            @Html.ValidationMessageFor(model => model.degistirmeTarihi)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

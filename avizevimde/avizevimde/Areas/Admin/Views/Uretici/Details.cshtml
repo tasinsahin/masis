@@ -1,0 +1,99 @@
+﻿@model avizevimde.Areas.Uretici.Models.uretici
+
+@{
+    ViewBag.Title = "Details";
+}
+     <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Uretici", "Index", "AdminUretici")<span class="divider">/</span>
+                        </li>  
+                        <li>
+                            @Html.ActionLink("Detaylar", "Details", "AdminUretici")
+                        </li>  
+                    </ul>
+            </div>
+
+ü
+
+
+<fieldset>
+    <legend>uretici</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.adi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.adi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ureticiAdi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ureticiAdi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ureticiTanim)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ureticiTanim)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ureticiTelefon1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ureticiTelefon1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ureticiTelefon2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ureticiTelefon2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ureticiCepTelefonu)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ureticiCepTelefonu)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ureticiEpostaAdresi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ureticiEpostaAdresi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ozelTasarimYapiyor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ozelTasarimYapiyor)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eklenmeTarihi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.degistirmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.degistirmeTarihi)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

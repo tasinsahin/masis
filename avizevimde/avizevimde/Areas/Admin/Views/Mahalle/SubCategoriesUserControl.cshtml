@@ -1,0 +1,18 @@
+﻿@model avizevimde.Areas.Admin.Models.productCatalog
+@if (Model.altkategoris != null && Model.altkategoris.Count() > 0)
+{
+    using (Ajax.BeginForm("SelectSubCategory", "CascadingDropDown", new AjaxOptions { UpdateTargetId = "Products" }))
+    { 
+    @Html.HiddenFor(m => m.SelectedCategoryId)
+    @Html.DropDownListFor(
+            m => m.SelectedSubCategoryId,
+            new SelectList(Model.altkategoris, "Id", "adi"),
+            string.Empty
+            )
+    }
+}
+<script type="text/javascript">
+    $('#SelectedSubCategoryId').change(function () {
+        $(this).parents('form').submit();
+    });
+</script>

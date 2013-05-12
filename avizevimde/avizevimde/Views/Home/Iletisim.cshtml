@@ -1,0 +1,119 @@
+﻿
+@model avizevimde.Models.oneri
+
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+ <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td id="center" valign="top">
+                <div id="center_top">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr></tr>
+                    </table>
+                </div>
+                <div id="center_middle">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td id="middle_left" valign="top">
+                                <div id="dynamicform" class="module">
+                                    <div id="module_content">
+                                        <div id="module_title">
+                                            <span><span id="module_title_icon"></span>İletişim Formu</span>
+                                        </div>
+                                        <div>
+                                            <div id="ctl05_formdiv">                          
+                                            <div class="editor-label">
+                                                @Html.LabelFor(model => model.adi)
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.EditorFor(model => model.adi)
+                                                @Html.ValidationMessageFor(model => model.adi)
+                                            </div>                                              
+                                            <div class="editor-label">
+                                                @Html.LabelFor(model => model.soyAdi)
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.EditorFor(model => model.soyAdi)
+                                                @Html.ValidationMessageFor(model => model.soyAdi)
+                                            </div>        
+                                            <div class="editor-label">
+                                                @Html.LabelFor(model => model.baslik)
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.EditorFor(model => model.baslik)
+                                                @Html.ValidationMessageFor(model => model.baslik)
+                                            </div>                          
+                                            <div class="editor-label">
+                                                @Html.LabelFor(model => model.icerik)
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.EditorFor(model => model.icerik)
+                                                @Html.ValidationMessageFor(model => model.icerik)
+                                            </div>                          
+                                            <div class="editor-label">
+                                                @Html.LabelFor(model => model.Eposta)
+                                            </div>
+                                            <div class="editor-field">
+                                                @Html.EditorFor(model => model.Eposta)
+                                                @Html.ValidationMessageFor(model => model.Eposta)
+                                            </div>
+                                            <p>
+                                                <input type="submit" value="Create" />
+                                            </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td id="middle_center" valign="top">
+                                <div id="contact" class="module">
+                                    <div id="module_content">
+                                        <div id="module_title">
+                                            <span><span id="module_title_icon"></span>İletişim Bilgileri</span>
+                                        </div>
+                                        <div>
+                                            <table cellpadding="4" cellspacing="0" border="0">
+                                                <tr>
+                                                    <td>Firma Adı</td>
+                                                    <td>: <span id="ctl04_lblName"> </span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Telefon No</td>
+                                                    <td>: <span id="ctl04_lblPhone">0216 344 37 17</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fax No</td>
+                                                    <td>: <span id="ctl04_lblFax">0216 329 75 18</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>E-Posta</td>
+                                                    <td>: <span id="ctl04_lblEmail">info@proticaret.org</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Adres</td>
+                                                    <td>: <span id="ctl04_lblAddress">Ferah Mah. Alemdağ Yanyolu Cad. Kasran Plaza No:24 K:1 D:3 Çamlıca Üsküdar-İstanbul
+                                                    </span></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="center_bottom">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr></tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+}

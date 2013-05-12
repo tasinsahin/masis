@@ -1,0 +1,210 @@
+﻿@{
+    ViewBag.Title = "SiparisAdimBir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td id="center" valign="top">
+            <div id="center_top">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr></tr>
+                </table>
+            </div>
+            <div id="center_middle">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td id="middle_center" valign="top">
+                            <div id="orderstep2" class="module">
+                                <div id="module_content">
+                                    <div id="module_title">
+                                        <span><span id="module_title_icon"></span>Teslimat ve Fatura Bilgileri</span>
+                                    </div>
+                                    <div>
+                                        <div id="ctl04_UpdatePanel1">
+                                            <input type="hidden" name="ctl04$CascadingDropDown1_ClientState" id="ctl04_CascadingDropDown1_ClientState" /><input type="hidden" name="ctl04$CascadingDropDown2_ClientState" id="ctl04_CascadingDropDown2_ClientState" /><input type="hidden" name="ctl04$CascadingDropDown3_ClientState" id="ctl04_CascadingDropDown3_ClientState" /><input type="hidden" name="ctl04$CascadingDropDown4_ClientState" id="ctl04_CascadingDropDown4_ClientState" /><input type="hidden" name="ctl04$CascadingDropDown5_ClientState" id="ctl04_CascadingDropDown5_ClientState" /><input type="hidden" name="ctl04$CascadingDropDown6_ClientState" id="ctl04_CascadingDropDown6_ClientState" /><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                <tr>
+                                                    <td valign="top">
+                                                        <div class="module_box">
+                                                            <label class="subtitle">Fatura Adresi</label><table cellspacing="0" cellpadding="3" border="0">
+                                                                <tr>
+                                                                    <td align="right">Kayıtlı Fatura Adresleri :</td>
+                                                                    <td>
+                                                                        <select name="ctl04$ddlBilling" onchange="javascript:setTimeout('__doPostBack(\'ctl04$ddlBilling\',\'\')', 0)" id="ctl04_ddlBilling">
+                                                                            <option selected="selected" value="0">-Yeni Fatura Adresi-</option>
+                                                                            <option value="1">111111111</option>
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">* Kişi/Kuruluş Adı :</td>
+                                                                    <td>
+                                                                        <input name="ctl04$CompanyName" type="text" maxlength="100" id="ctl04_CompanyName" /><span id="ctl04_rq1" style="color: Red; visibility: hidden;">*</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">Vergi Dairesi :</td>
+                                                                    <td>
+                                                                        <input name="ctl04$taxOffice" type="text" maxlength="100" id="ctl04_taxOffice" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">* T.C. Kimlik No/Vergi No :</td>
+                                                                    <td>
+                                                                        <input name="ctl04$taxNo" type="text" maxlength="11" id="ctl04_taxNo" /><span id="ctl04_rq2" style="color: Red; visibility: hidden;">*</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">* Telefon :</td>
+                                                                    <td>
+                                                                        <input name="ctl04$txtBillPhoneNo" type="text" maxlength="14" id="ctl04_txtBillPhoneNo" errormessage="geçersiz giriş" errortext="*" onkeypress="return MaskedTextBox_VerifyMask(event, this, 'ctl04_txtBillPhoneNo');" onfocus="MaskedTextBox_FocusMask(this, 'ctl04_txtBillPhoneNo');" onchange="MaskedTextBox_Change(this, 'ctl04_txtBillPhoneNo');" /><span id="ctl04_RequiredFieldValidator1" style="color: Red; visibility: hidden;">*</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">Cep Telefonu :</td>
+                                                                    <td>
+                                                                        <input name="ctl04$txtBillGSMno" type="text" maxlength="14" id="ctl04_txtBillGSMno" errormessage="geçersiz giriş" errortext="*" onkeypress="return MaskedTextBox_VerifyMask(event, this, 'ctl04_txtBillGSMno');" onfocus="MaskedTextBox_FocusMask(this, 'ctl04_txtBillGSMno');" onchange="MaskedTextBox_Change(this, 'ctl04_txtBillGSMno');" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">* Ülke :</td>
+                                                                    <td>
+                                                                        <select name="ctl04$ddlBillCountry" id="ctl04_ddlBillCountry" class="select">
+                                                                            <option value=""></option>
+                                                                        </select><span id="ctl04_RequiredFieldValidator22" style="color: Red; visibility: hidden;">*</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">* Şehir :</td>
+                                                                    <td>
+                                                                        <select name="ctl04$ddlBillCity" id="ctl04_ddlBillCity">
+                                                                            <option value=""></option>
+                                                                        </select><span id="ctl04_rq3" style="color: Red; visibility: hidden;">*</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">İlçe :</td>
+                                                                    <td>
+                                                                        <select name="ctl04$ddlBillDistrict" id="ctl04_ddlBillDistrict" class="select">
+                                                                            <option value=""></option>
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right" valign="top">* Fatura Adresi :</td>
+                                                                    <td>
+                                                                        <textarea name="ctl04$txtBillAddress" rows="2" cols="20" id="ctl04_txtBillAddress"></textarea><span id="ctl04_rq4" style="color: Red; visibility: hidden;">*</span></td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top">
+                                                        <div class="module_box">
+                                                            <label class="subtitle">Teslimat Adresi</label><label><input id="ctl04_chkUseBillingOnShipping" type="checkbox" name="ctl04$chkUseBillingOnShipping" checked="checked" onclick="ShippingChecked();" />Fatura Adresime gönderilsin</label><table id="tblShipping" cellspacing="0" cellpadding="3" border="0" style="display: none;">
+                                                                <tr>
+                                                                    <td align="right">Kayıtlı Teslimat Adresleri :</td>
+                                                                    <td>
+                                                                        <select name="ctl04$ddlShipping" onchange="javascript:setTimeout('__doPostBack(\'ctl04$ddlShipping\',\'\')', 0)" id="ctl04_ddlShipping">
+                                                                            <option selected="selected" value="0">-Yeni Teslimat Adresi-</option>
+                                                                            <option value="1">rrr</option>
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">* Kişi/Kuruluş Adı :</td>
+                                                                    <td>
+                                                                        <input name="ctl04$txtRecipientName" type="text" maxlength="100" id="ctl04_txtRecipientName" /><span id="ctl04_rqs1" style="color: Red; visibility: hidden;">*</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">* Telefon :</td>
+                                                                    <td>
+                                                                        <input name="ctl04$txtPhoneNo" type="text" maxlength="14" id="ctl04_txtPhoneNo" errormessage="geçersiz giriş" errortext="*" onkeypress="return MaskedTextBox_VerifyMask(event, this, 'ctl04_txtPhoneNo');" onfocus="MaskedTextBox_FocusMask(this, 'ctl04_txtPhoneNo');" onchange="MaskedTextBox_Change(this, 'ctl04_txtPhoneNo');" /><span id="ctl04_rqs2" style="color: Red; visibility: hidden;">*</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">Cep Telefonu :</td>
+                                                                    <td>
+                                                                        <input name="ctl04$txtGSMno" type="text" maxlength="14" id="ctl04_txtGSMno" errormessage="geçersiz giriş" errortext="*" onkeypress="return MaskedTextBox_VerifyMask(event, this, 'ctl04_txtGSMno');" onfocus="MaskedTextBox_FocusMask(this, 'ctl04_txtGSMno');" onchange="MaskedTextBox_Change(this, 'ctl04_txtGSMno');" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">* Ülke :</td>
+                                                                    <td>
+                                                                        <select name="ctl04$ddlShipCountry" id="ctl04_ddlShipCountry" class="select">
+                                                                            <option value=""></option>
+                                                                        </select><span id="ctl04_rqs5" style="color: Red; visibility: hidden;">*</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">* Şehir :</td>
+                                                                    <td>
+                                                                        <select name="ctl04$ddlShipCity" id="ctl04_ddlShipCity">
+                                                                            <option value=""></option>
+                                                                        </select><span id="ctl04_rqs3" style="color: Red; visibility: hidden;">*</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right">İlçe :</td>
+                                                                    <td>
+                                                                        <select name="ctl04$ddlShipDistrict" id="ctl04_ddlShipDistrict" class="select">
+                                                                            <option value=""></option>
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right" valign="top">* Teslimat Adresi :</td>
+                                                                    <td>
+                                                                        <textarea name="ctl04$txtShipAddress" rows="2" cols="20" id="ctl04_txtShipAddress"></textarea><span id="ctl04_rqs4" style="color: Red; visibility: hidden;">*</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="right" valign="top">Adres Tarifi :</td>
+                                                                    <td>
+                                                                        <textarea name="ctl04$txtShipDescription" rows="2" cols="20" id="ctl04_txtShipDescription"></textarea></td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right">
+                                                        <label><a id="ctl04_btnPay" class="buybutton" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl04$btnPay&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Devam Et</a></label></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div id="ctl04_mup" style="display: none;">
+                                            <div class="modalPopup">
+                                                <p>
+                                                    Yükleniyor...
+                                                                                                                                      <img alt="Yükleniyor" src="/themes/default/images/loading.gif" align="middle" />
+                                                </p>
+                                                <p>
+                                                    Lütfen bekleyiniz...
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div id="ctl04_ValidationSummary1" style="color: Red; display: none;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                $(function () {
+                                    ShippingChecked();
+                                });
+                                function pageLoad(sender, args) {
+                                    if (args.get_isPartialLoad())
+                                    { ShippingChecked(); }
+                                }
+                                function ShippingChecked() {
+                                    var chkShipping = document.getElementById('ctl04_chkUseBillingOnShipping');
+                                    if (chkShipping.checked) {
+                                        $("#tblShipping").fadeOut();
+                                        ValidatorEnable(document.getElementById('ctl04_rqs1'), false);
+                                        ValidatorEnable(document.getElementById('ctl04_rqs2'), false);
+                                        ValidatorEnable(document.getElementById('ctl04_rqs3'), false);                                        ValidatorEnable(document.getElementById('ctl04_rqs4'), false);                                        ValidatorEnable(document.getElementById('ctl04_rqs5'), false);
+                                    }
+                                    else {
+                                        $("#tblShipping").fadeIn();
+                                        ValidatorEnable(document.getElementById('ctl04_rqs1'), true);
+                                        ValidatorEnable(document.getElementById('ctl04_rqs2'), true);
+                                        ValidatorEnable(document.getElementById('ctl04_rqs3'), true);                                        ValidatorEnable(document.getElementById('ctl04_rqs4'), true);                                        ValidatorEnable(document.getElementById('ctl04_rqs5'), true);
+                                    }
+                                }
+                            </script>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="center_bottom">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr></tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,76 @@
+﻿@model avizevimde.Areas.Admin.Models.smsTuketici
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>smsTuketici</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tuketici.tuketiciAdi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tuketiciId)
+            @Html.ValidationMessageFor(model => model.tuketici.tuketiciAdi)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.baslik)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.baslik)
+            @Html.ValidationMessageFor(model => model.baslik)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.icerik)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.icerik)
+            @Html.ValidationMessageFor(model => model.icerik)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.smsTarihi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.smsTarihi)
+            @Html.ValidationMessageFor(model => model.smsTarihi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.smsNumara)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.smsNumara)
+            @Html.ValidationMessageFor(model => model.smsNumara)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.eklenmeTarihi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.eklenmeTarihi)
+            @Html.ValidationMessageFor(model => model.eklenmeTarihi)
+        </div> 
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

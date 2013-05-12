@@ -1,0 +1,43 @@
+﻿@model avizevimde.Models.oneri
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>oneri</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Eposta)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Eposta)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.baslik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.baslik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.icerik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.icerik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eklenmeTarihi)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

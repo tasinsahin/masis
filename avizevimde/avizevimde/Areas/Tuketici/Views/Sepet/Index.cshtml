@@ -1,0 +1,273 @@
+﻿@model IEnumerable<avizevimde.Areas.Tuketici.Models.sepet>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Tuketici/Views/Shared/_Layout";
+}
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td id="center" valign="top">
+            <div id="center_top">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr></tr>
+                </table>
+            </div>
+            <div id="center_middle">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td id="middle_center" valign="top">
+                            <div id="cart" class="module">
+                                <div id="module_content">
+                                    <div id="module_title">
+                                        <span><span id="module_title_icon"></span>Alışveriş Sepeti</span>
+                                    </div>
+                                    <div id="ctl04_UpdatePanel1">
+                                        <table id="TblMain" cellspacing="0" cellpadding="0" width="100%" border="0">
+                                            <tr>
+                                                <td align="left">
+                                                    <div class="module_box">
+                                                        <a id="ctl04_lnkUseCoupons" class="lightbox addbutton" href="/store/addcoupon.aspx">İndirim Kuponu Ekle</a><div class="clear"></div>
+                                                        <span id="ctl04_lblCouponInfo"></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td id="ctl04_SepetlerContainer">
+                                                    <div class="module_box">
+                                                        <label class="subtitle">Sepetler</label><table cellpadding="1" cellspacing="0" border="0" width="100%">
+                                                            <tr>
+                                                                <td colspan="2"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left">
+                                                                    <table id="ctl04_TblSepetler" cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                        <tr>
+                                                                            <td>Sepet Seçiniz
+                                                                                                <select name="ctl04$ddlSepet" onchange="javascript:setTimeout('__doPostBack(\'ctl04$ddlSepet\',\'\')', 0)" id="ctl04_ddlSepet">
+                                                                                                    <option selected="selected" value="0">Alışveriş Sepeti</option>
+                                                                                                </select><a id="ctl04_lnkaddnew" class="addbutton lightbox" href="/store/editcart.aspx?IND=0&amp;DIND=0&amp;MID=0">Yeni Ekle</a></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <table id="ctl04_TblTransfer">
+                                                                        <tr>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td id="ctl04_SepetContainer">
+                                                    <div class="module_box">
+                                                        <label><span id="ctl04_lblKampanya0"></span></label>
+                                                        <table id="TblSepet" cellspacing="0" cellpadding="2" width="100%" border="0">
+                                                            <tr>
+                                                                <td>
+                                                                    <table class="datalist" cellspacing="0" cellpadding="4" border="0" id="ctl04_DataGrid0" style="width: 100%; border-collapse: collapse;">
+                                                                        <tr class="title">
+                                                                            <td align="center">Ürün Resmi</td>
+                                                                            <td>Ürün Adı</td>
+                                                                            <td>Puan</td>
+                                                                            <td align="center" style="white-space: nowrap;">Miktar</td>
+                                                                            <td align="right" style="white-space: nowrap;">Birim Fiyat</td>
+                                                                            <td align="right" style="white-space: nowrap;">Kdv Oranı</td>
+                                                                            <td align="right" style="white-space: nowrap;">Kdv Hariç Tutar</td>
+                                                                            <td style="white-space: nowrap;">Seçim</td>
+                                                                        </tr>
+                                                                        <tr class="row">
+                                                                            <td align="center" style="width: 80px;">
+                                                                                <img alt="" class="thumb" src='/store/makethumb.aspx?file=/sample/iphone.jpg&intSize=50' /></td>
+                                                                            <td>
+                                                                                <itemstyle wrap="False"></itemstyle>
+                                                                                <a id="ctl04_DataGrid0_ctl02_Hyperlink7" href="http://demo.proticaret.org/urun/apple-iphone-4-16-gb-cep-telefonu-kvk-onayli_112.aspx">Apple Iphone 4 16 Gb Cep Telefonu KVK Onaylı</a><span id="ctl04_DataGrid0_ctl02_Hy7a"><div></div>
+                                                                                </span><a id="ctl04_DataGrid0_ctl02_Hyperlink1a6" href="Javascript:var%20PopUpWin%20=%20window.open(&quot;../store/campaininfo.aspx?IND=0&quot;,&quot;&quot;,&quot;width=300,height=300,scrollbars=1,toolbar=0,status=1,resizable=1&quot;)"></a></td>
+                                                                            <td>
+                                                                                <itemstyle wrap="False"></itemstyle>
+                                                                                <span id="ctl04_DataGrid0_ctl02_lblPuan">3.700,00 Puan</span></td>
+                                                                            <td align="left" style="width: 120px; white-space: nowrap;">
+                                                                                <input name="ctl04$DataGrid0$ctl02$Quantity" type="text" value="2" maxlength="4" size="4" id="ctl04_DataGrid0_ctl02_Quantity" />&nbsp;
+                                                                                    <span id="ctl04_DataGrid0_ctl02_Label18">Adet</span></td>
+                                                                            <td align="right" style="white-space: nowrap;"><span id="ctl04_DataGrid0_ctl02_Label9" name="Label9">1.720,50 TL</span></td>
+                                                                            <td align="right" style="white-space: nowrap;">%18</td>
+                                                                            <td align="right" style="white-space: nowrap;"><span id="ctl04_DataGrid0_ctl02_Label12">3.441,00 TL</span></td>
+                                                                            <td align="justify">
+                                                                                <center>
+                                                                                        <input id="ctl04_DataGrid0_ctl02_Remove" type="checkbox" name="ctl04$DataGrid0$ctl02$Remove" /></center>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right"><a id="ctl04_lnkUpdate" class="savebutton" href="javascript:__doPostBack('ctl04$lnkUpdate','')">Güncelle</a><a id="ctl04_lnkDelete" class="deletebutton" href="javascript:__doPostBack('ctl04$lnkDelete','')">Sil</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                                        <tr>
+                                                                            <td align="left">
+                                                                                <table id="ctl04_dlCargoList" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                                                                    <tr>
+                                                                                        <td><b>Kargo Fiyatı</b></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td><span id="ctl04_dlCargoList_ctl01_lblCargoName">PTT</span>:
+                                                                                                <span id="ctl04_dlCargoList_ctl01_lblCargoText">10,00 TL</span></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td><span id="ctl04_dlCargoList_ctl02_lblCargoName">UPS</span>:
+                                                                                                <span id="ctl04_dlCargoList_ctl02_lblCargoText">10,00 TL</span></td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td align="right">
+                                                                                <table id="ctl04_tblfy" cellspacing="0" cellpadding="2" border="0">
+                                                                                    <tr>
+                                                                                        <td align="right"></td>
+                                                                                        <td align="right"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="right"></td>
+                                                                                        <td align="right"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="right"><span id="ctl04_lblIndirim">Toplam İndirim:</span></td>
+                                                                                        <td align="right"><span id="ctl04_lblToplamIndirim">(% 7,00)  259,00 TL</span></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="right"><span id="ctl04_Label2">Ürün ve Hizmet Bedeli:</span></td>
+                                                                                        <td align="right"><span id="ctl04_lblToplamTutar">3.441,00 TL</span></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="right"><span id="ctl04_Label6">Toplam Kdv:</span></td>
+                                                                                        <td align="right"><span id="ctl04_lblToplamKdv">619,38 TL</span></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="right"></td>
+                                                                                        <td align="right"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="right"></td>
+                                                                                        <td align="right"></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="right" colspan="2"><span id="ctl04_lblSepetSeperator1"></span></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="right"><span id="ctl04_Label7">Kdv Dahil Ödenecek Toplam Bedel:</span></td>
+                                                                                        <td align="right"><span id="ctl04_lblKdvDahilToplam">4.060,38 TL</span></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="right"><span id="ctl04_lblHavale">Banka Havalesi İle Ödeme:</span></td>
+                                                                                        <td align="right"><span id="ctl04_lblKdvDahilHavale">3.950,64 TL</span></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="right"><span id="ctl04_lblKKTek">Kredi Kartı İle Tek Çekim:</span></td>
+                                                                                        <td align="right"><span id="ctl04_lblKdvDahilKK">3.857,36 TL</span></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="right" colspan="2"><span id="ctl04_lblSepetSeperator2"></span></td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">
+                                                    <table id="Table6" cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                        <tr>
+                                                            <td id="ctl04_Td7"></td>
+                                                            <td id="ctl04_Td8"></td>
+                                                            <td id="ctl04_Td9"></td>
+                                                        </tr>
+                                                    </table>
+                                                    <table cellpadding="0">
+                                                        <tr>
+                                                            <td></td>
+                                                            <td><a id="ctl04_lnkbuyuser" class="buybutton" href="https://demo.proticaret.org/store/orderstep2.aspx">Satın Al</a></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div id="ctl04_mup" style="display: none;">
+                                        <div class="modalPopup">
+                                            <p>
+                                                Yükleniyor...
+                                                                <img alt="Yükleniyor" src="/themes/default/images/loading.gif" align="middle" />
+                                            </p>
+                                            <p>Lütfen bekleyiniz... </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                $(document).ready(function () {
+                                    //$("#ctl04_lnkbuyuser").button({icons:{primary:'ui-icon-circle-check'}});
+                                    //$("#ctl04_lnkbuyguest").button({icons:{primary:'ui-icon-circle-check'}});
+                                    //$("#ctl04_lnkEdit").button({icons:{primary:'ui-icon-pencil'}});
+                                    //$("#ctl04_lnkUseCoupons").button({icons:{primary:'ui-icon-plus'}});
+                                    //$("#ctl04_lnkaddnew").button({icons:{primary:'ui-icon-plus'}});
+                                    //$("#ctl04_lnkDelete").button({icons:{primary:'ui-icon-close'}});
+                                    //$("#ctl04_lnkDeleteCart").button({icons:{primary:'ui-icon-close'}});
+                                    //$("#ctl04_btnDeleteCoupon").button({icons:{primary:'ui-icon-close'}});
+                                    //$("#ctl04_lnkUpdate").button({icons:{primary:'ui-icon-disk'}});
+                                    //$("#ctl04_lnkTransfer").button({icons:{primary:'ui-icon-transfer-e-w'}});
+                                    $(".lightboxCoupon").colorbox({ onClosed: function () { location.reload(true); }, width: "400", height: "200", iframe: true });
+                                    $(".lightbox").colorbox({ title: false, width: "400", height: "300", iframe: true, scrolling: false, onClosed: function () { window.location.reload(); } });
+                                    $(".lnkbuyguest").colorbox({ title: false, width: "600", height: "350", iframe: true, scrolling: false });
+                                });
+                                jQuery(document).ready(function () {
+                                    jQuery(window).bind("load", function () {
+                                        var frameWidth = jQuery(document).width();
+                                        var frameHeight = jQuery(document).height() + 20;
+                                        parent.$.fn.colorbox.myResize(frameWidth, frameHeight);
+                                    });
+                                });
+                                var prm = Sys.WebForms.PageRequestManager.getInstance();
+                                prm.add_endRequest(function () {
+                                    //$("#ctl04_lnkbuyuser").button({icons:{primary:'ui-icon-circle-check'}});
+                                    //$("#ctl04_lnkbuyguest").button({icons:{primary:'ui-icon-circle-check'}});
+                                    //$("#ctl04_lnkEdit").button({icons:{primary:'ui-icon-pencil'}});
+                                    //$("#ctl04_lnkUseCoupons").button({icons:{primary:'ui-icon-plus'}});
+                                    //$("#ctl04_lnkaddnew").button({icons:{primary:'ui-icon-plus'}});
+                                    //$("#ctl04_lnkDelete").button({icons:{primary:'ui-icon-close'}});
+                                    //$("#ctl04_lnkDeleteCart").button({icons:{primary:'ui-icon-close'}});
+                                    //$("#ctl04_btnDeleteCoupon").button({icons:{primary:'ui-icon-close'}});
+                                    //$("#ctl04_lnkUpdate").button({icons:{primary:'ui-icon-disk'}});
+                                    //$("#ctl04_lnkTransfer").button({icons:{primary:'ui-icon-transfer-e-w'}});
+                                    $(".lightboxCoupon").colorbox({ onClosed: function () { location.reload(true); }, width: "400", height: "200", iframe: true });
+                                    $(".lightbox").colorbox({ title: false, width: "400", height: "300", iframe: true, scrolling: false, onClosed: function () { window.location.reload(); } });
+                                    $(".lnkbuyguest").colorbox({ title: false, width: "600", height: "350", iframe: true, scrolling: false });
+                                });
+                            </script>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="center_bottom">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr></tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>

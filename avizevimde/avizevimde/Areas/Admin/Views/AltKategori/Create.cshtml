@@ -1,0 +1,89 @@
+﻿@model avizevimde.Areas.Admin.Models.altKategori
+
+@{
+    ViewBag.Title = "Create";
+}
+     <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Alt Kategori", "Index", "AltKategori")<span class="divider">/</span>
+                        </li>  
+                        <li>
+                            @Html.ActionLink("Yeni", "Create", "AltKategori")
+                        </li>  
+                    </ul>
+            </div>
+
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>altKategori</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.kategoriId, "kategori")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("kategoriId",string.Empty)
+            @Html.ValidationMessageFor(model => model.kategoriId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.aciklama)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.aciklama)
+            @Html.ValidationMessageFor(model => model.aciklama)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.anahtarKelime)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.anahtarKelime)
+            @Html.ValidationMessageFor(model => model.anahtarKelime)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.altTanim)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.altTanim)
+            @Html.ValidationMessageFor(model => model.altTanim)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.adi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.adi)
+            @Html.ValidationMessageFor(model => model.adi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.baslik)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.baslik)
+            @Html.ValidationMessageFor(model => model.baslik)
+        </div>
+        
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

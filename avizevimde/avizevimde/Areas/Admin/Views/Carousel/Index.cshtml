@@ -1,0 +1,114 @@
+﻿@model IEnumerable<avizevimde.Areas.Admin.Models.carousel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+   <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Carousel", "Index", "Carousel")
+                        </li>  
+                    </ul>
+            </div>
+
+
+			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-th"></i>Carousel</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+                  	<div class="row-fluid">
+                    <p>
+                        @Html.ActionLink("Create New", "Create")
+                    </p>
+                    <table>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.aciklamasi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.url)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.varsayilan)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.alt)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.tanim)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.anahtarKelime)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.eklenmeTarihi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ekleyen.adminAdi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.degistirmeTarihi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.degistirme.adminAdi)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                    @foreach (var item in Model) {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.aciklamasi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.url)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.varsayilan)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.alt)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tanim)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.anahtarKelime)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.eklenmeTarihi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ekleyen.adminAdi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.degistirmeTarihi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.degistiren.adminAdi)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                            </td>
+                        </tr>
+                    }
+
+                    </table>
+                  	</div>                   
+                  </div>
+				</div><!--/span-->
+			</div><!--/row-->
+

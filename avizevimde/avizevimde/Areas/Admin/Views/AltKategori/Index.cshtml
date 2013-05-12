@@ -1,0 +1,91 @@
+﻿@model IEnumerable<avizevimde.Areas.Admin.Models.altKategori>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+     <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Alt Kategori", "Index", "AltKategori")
+                    </ul>
+            </div>
+    
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.kategori.adi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.aciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.anahtarKelime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.altTanim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.baslik)
+        </th> 
+        <th>
+            @Html.DisplayNameFor(model => model.degistiren.adminAdi)
+        </th> 
+        <th>
+            @Html.DisplayNameFor(model => model.degistirmeTarihi)
+        </th> 
+        <th>
+            @Html.DisplayNameFor(model => model.ekleyen.adminAdi)
+        </th> 
+        <th>
+            @Html.DisplayNameFor(model => model.eklenmeTarihi)
+        </th> 
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.kategori.adi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.aciklama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.anahtarKelime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.altTanim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baslik)
+        </td> 
+            @Html.DisplayFor(modelItem => item.degistiren.adminEposta)
+        </td> 
+            @Html.DisplayFor(modelItem => item.degistirmeTarihi)
+        </td> 
+            @Html.DisplayFor(modelItem => item.ekleyen.adminAdi)
+        </td> 
+            @Html.DisplayFor(modelItem => item.ekleyen.adminAdi)
+        </td> 
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

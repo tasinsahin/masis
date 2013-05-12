@@ -1,0 +1,47 @@
+﻿@model avizevimde.Models.oneri
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>oneri</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Eposta)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Eposta)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.baslik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.baslik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.icerik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.icerik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eklenmeTarihi)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

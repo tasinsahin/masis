@@ -1,0 +1,172 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head id="head1">
+    <title>Anasayfa :</title>
+    <meta id="description" name="description" content="" />
+    <meta id="keywords" name="keywords" content="" />
+    <meta name="robots" content="INDEX,FOLLOW,NOODP,NOYDIR" />
+
+    <link rel="Stylesheet" type="text/css" href="~/Content/themes/default/css/reset.css" />
+    <link rel="Stylesheet" type="text/css" href="~/Content/themes/default/css/Portal.css" />
+    <link rel="Stylesheet" type="text/css" href="~/Content/themes/default/css/jquery-ui.css" />
+    <link rel="Stylesheet" type="text/css" href="~/Content/themes/default/css/ui-selectmenu.css" />
+    <link rel="Stylesheet" type="text/css" href="~/Content/themes/default/css/popup-modal.css" />
+</head>
+<body>
+    <div id="container">
+        <form name="Form1" method="post" action="http://demo.proticaret.org/Default.aspx" id="Form1">
+            <div>
+                <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" /><input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4NDQyODc4MA9kFgQCAQ9kFgQCAQ8WAh4HY29udGVudGVkAgIPFgIfAGVkAgMPZBYEAhIPFgIeB1Zpc2libGVnZAIUDxYCHwFnFgQCAQ8PFgIfAWhkZAICD2QWBGYPDxYCHgRUZXh0ZWRkAgEPZBYCZg9kFgICAQ9kFgRmD2QWAmYPZBYEAgEPEGRkFgFmZAICDxBkZBYBZmQCAQ9kFgJmD2QWAgIBDzwrAAsCAA8WAh8BaGQBPCsACQEFPCsABAEAFgIfAWhkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBQ5jdGwwOSRjaGtTdG9ja95u94T7ZekmY7OcPcWFr72XU12M" /></div>
+            <script src="~/Content/services/UserService.asmx/js.js" type="text/javascript"></script>
+            <script src="~/Content/services/ShoppingCartService.asmx/js.js" type="text/javascript"></script>
+            <script src="~/Content/services/CategoryService.asmx/js.js" type="text/javascript"></script>
+            <script src="~/Content/services/MarkService.asmx/js.js" type="text/javascript"></script>
+            <script src="~/Content/services/ProductService.asmx/js.js" type="text/javascript"></script>
+            <script src="~/Content/services/Service3d.asmx/js.js" type="text/javascript"></script>
+            <script type="text/javascript" src="~/Content/themes/default/js/jquery.min.js"></script>
+            <script type="text/javascript" src="~/Content/themes/default/js/jquery-ui.min.js"></script>
+            <script type="text/javascript" src="~/Content/themes/default/js/ui.selectmenu.min.js"></script>
+            <script type="text/javascript" src="~/Content/themes/default/js/jquery-colorbox.min.js"></script>
+            <script type="text/javascript" src="~/Content/themes/default/js/global.js"></script>
+            <script type="text/javascript" src="~/Content/themes/default/js/jquery.cookie.min.js"></script>
+            <div id="header">
+                <div id="header_db">
+                    <div id="ctl02_header_db_content"></div>
+                </div>
+                <div id="header_content">
+                    <div id="user-menu" class="radius7"><a id="ctl02_rptCurrency_ctl00_lnkCurrency" title="TL" href="javascript:__doPostBack('ctl02$rptCurrency$ctl00$lnkCurrency','')">TL</a><a href="#">|</a><a id="ctl02_rptCurrency_ctl01_lnkCurrency" title="USD" href="javascript:__doPostBack('ctl02$rptCurrency$ctl01$lnkCurrency','')">$</a><a href="#">|</a><a id="ctl02_rptCurrency_ctl02_lnkCurrency" title="EURO" href="javascript:__doPostBack('ctl02$rptCurrency$ctl02$lnkCurrency','')">EUR</a><a href="#">|</a></div>
+                    <div id="logo">  
+                        <a href="@Url.Action("Index", "Home")"><img src="~/Content/themes/default/images/logo.png", alt="Edit" /></a>
+                    </div>
+                    <div id="user-menu" class="radius7">
+                        @Html.Partial("_UserPartial")
+                    </div>
+                    <div class="clear"></div>
+                    <div id="main-top"></div>
+                    <div id="top-menu">
+                        <div id="topmenu-categories">
+                            <div id="tc-right">
+                                <a href="#" class="main radius7">Tüm Kategoriler<span class="arrow"></span>
+                                 </a> 
+                            </div>
+                        </div>
+                        <div id="topmenu-content">
+                            <div id="topmenu-search">
+                                <input name="txtSearch" type="text" id="txtSearch" title="Ürün Arama" class="search-fld"
+                                    onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {LigthSearchx('txtSearch','btnSearch');return false;}} else {return true}; "
+                                    onclick="this.value = '';" onblur="this.value=!this.value?'Ürün Arama':this.value;"
+                                    value="Ürün Arama" /><a id="btnSearch" class="search-btn" href="javascript:LigthSearchx('txtSearch','btnSearch');"></a>
+                                       @Html.ActionLink("Gelişmiş Arama", "GelismisArama", "Home", new { area=""}, new { }) 
+                            </div>
+                            <div id="topmenu-line"></div>
+                            <div id="topmenu-cart">
+                                <img src="~/Content/themes/default/images/icon_cart.png" alt="sepet" border="0" />&nbsp;@Html.ActionLink("Sepetim","Sepet","Home") 
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="main">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td id="center" valign="top">
+                            <div id="center_top">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr></tr>
+                                </table>
+                            </div>
+                            <div id="center_middle">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                        <td id="middle_left" valign="top">
+                                            <div id="htmlmodule" class="module">
+                                                <div id="module_content">
+                                                    <div id="module_title">
+                                                        <span><span id="module_title_icon"></span>Facebook</span>
+                                                    </div>
+                                                    <div id="ctl05_HtmlHolder">
+                                                        <a href="https://www.facebook.com/fertas.elektrik" class="ui-priority-primary">
+                                                        <img src="~/Content/themes/default/images/addon_facebook_magaza.png" alt="Facebook Store Demo" /></a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="htmlmodule" class="module">
+                                                <div id="module_content2">
+                                                    <div id="ctl07_HtmlHolder2">
+                                                            <a href="@Url.Action("DavetEt", "Home")"><img src="~/Content/themes/default/images/banner_davet.jpg", alt="Edit" /></a>
+                                                </div>
+                                            </div>
+                                            <link href="~/Content/themes/default/css/promenu.css" type="text/css" rel="stylesheet" />
+                                            <div id="categorypro" class="module">
+                                                @Html.Partial("_KategorilerPartial")
+                                            </div>
+                                            <div id="htmlmodule" class="module">
+                                                @Html.Partial("_Sol1Partial")
+                                            </div>
+                                            <div id="htmlmodule" class="module">
+                                                @Html.Partial("_Sol2Partial")
+                                            </div>
+                                            <div id="htmlmodule" class="module">
+                                                @Html.Partial("_Sol3Partial")
+                                            </div> 
+                                            <div id="htmlmodule" class="module">
+                                                <div id="module_content">
+                                                    <div id="module_title">
+                                                        <span><span id="module_title_icon"></span>Avantajlar</span>
+                                                    </div>
+                                                    <div id="ctl12_HtmlHolder">
+                                                        <img alt="" src="~/Content/themes/default/images/banner_taksit.jpg" width="188" /></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td id="middle_center" valign="top">
+                                            <div id="homeproducts" class="module">
+                                                @Html.Partial("_OrtaPartial")
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="center_bottom">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr></tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <span id="lbllvl"></span>
+            <div id="footer">
+                <div id="footer_db">
+                    <div id="ctl03_footer_db_content"></div>
+                </div>
+                <div id="main-bottom"></div>
+                <div id="footer-content">
+                    
+               @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()                
+            </section>
+                    <span class="social">
+                        <a href="https://www.facebook.com/fertas.elektrik" target="_blank">
+                        <img src="~/Content/themes/default/images/icon_facebook.png" border="0" /></a>
+                        <a href="https://twitter.com/FertasElektrik" target="_blank">
+                            <img src="~/Content/themes/default/images/icon_twitter.png" border="0" /></a>
+
+                    </span><p>@Html.ActionLink("Kullanım Koşulları","KullanimKosullari","Home", new { area=""}, new { }) | @Html.ActionLink("Gizlilik Politikası","GizlilikPOlitikasi","Home", new { area=""}, new { }) | @Html.ActionLink("Admin Girişi", "Index", "Account", new { area = "Admin" }, new { }) | @Html.ActionLink("Uretici Girişi", "Index", "Account", new { area = "Uretici" }, new { }) | @Html.ActionLink("Montajcı Girişi", "Index", "Account", new { area = "Montajci" }, new { })</p>
+                    <p>Copyright © <b>demo.proticaret.org</b> Tüm Hakları Saklıdır.</p>
+                    <b>Adres:</b> Ferah Mah. Alemdağ Yanyolu Cad. Kasran Plaza No:24 K:1 D:3 Çamlıca Üsküdar-İstanbul<b>Telefon No:</b> 0216 344 37 17 <b>E-Posta:</b> info@proticaret.org
+                    <div id="ctl03_footer_ref" class="footer_ref"><span>Powered by </span><a title="eticaret" href="http://www.proticaret.net/" target="_blank">Proticaret</a></div>
+                </div>
+            </div>  
+        </form>
+    </div>
+</body>
+</html>

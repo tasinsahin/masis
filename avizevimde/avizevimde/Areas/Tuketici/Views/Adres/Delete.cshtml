@@ -1,0 +1,132 @@
+﻿@model avizevimde.Areas.Tuketici.Models.tuketiciAdres
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Tuketici/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>tuketiciAdres</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tuketiciId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tuketiciId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.sehirId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sehirId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ilceId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ilceId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.semtId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.semtId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mahalleId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mahalleId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cadde)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cadde)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.sokak)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sokak)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.numara)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.numara)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.enlem)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.enlem)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.boylam)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.boylam)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.adresAdi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.adresAdi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.adresFatura)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.adresFatura)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.adresTeslimat)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.adresTeslimat)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EklenmeTarihi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.degistirilenId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.degistirilenId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.enYeni)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.enYeni)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

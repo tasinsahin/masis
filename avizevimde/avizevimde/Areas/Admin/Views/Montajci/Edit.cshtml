@@ -1,0 +1,101 @@
+﻿@model avizevimde.Areas.Montajci.Models.montajci
+
+@{
+    ViewBag.Title = "Edit";
+}
+                                <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "AdminAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Montajcı", "Index", "Montajci")<span class="divider">/</span>
+                        </li>  
+                        <li>
+                            @Html.ActionLink("Düzenle", "Edit", "Renk")
+                        </li>  
+                    </ul>
+            </div>
+
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+                <fieldset>
+                    <legend>montajci</legend>
+
+                    @Html.HiddenFor(model => model.MyProperty)
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.adi)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.adi)
+                        @Html.ValidationMessageFor(model => model.adi)
+                    </div>
+
+                    @Html.HiddenFor(model => model.montajciId)
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.montajciAdi)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.montajciAdi)
+                        @Html.ValidationMessageFor(model => model.montajciAdi)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.montajciTanim)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.montajciTanim)
+                        @Html.ValidationMessageFor(model => model.montajciTanim)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.montajciTelefon)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.montajciTelefon)
+                        @Html.ValidationMessageFor(model => model.montajciTelefon)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.montajciTelefon2)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.montajciTelefon2)
+                        @Html.ValidationMessageFor(model => model.montajciTelefon2)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.montajciCepTelefonu)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.montajciCepTelefonu)
+                        @Html.ValidationMessageFor(model => model.montajciCepTelefonu)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.montajciEpostaAdresi)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.montajciEpostaAdresi)
+                        @Html.ValidationMessageFor(model => model.montajciEpostaAdresi)
+                    </div>
+
+                    <p>
+                        <input type="submit" value="Save" />
+                    </p>
+                </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

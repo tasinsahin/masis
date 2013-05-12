@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "avizevimde", "avizevimde\avizevimde.csproj", "{B1BE98EB-2713-48B1-9DB0-5F30B6C13B5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "avizevimde.Tests", "avizevimde.Tests\avizevimde.Tests.csproj", "{FE8CB29A-AC2E-44FE-9E0A-520DC85AD106}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{87323B30-8DCD-463A-929F-780914D56BC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1BE98EB-2713-48B1-9DB0-5F30B6C13B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BE98EB-2713-48B1-9DB0-5F30B6C13B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BE98EB-2713-48B1-9DB0-5F30B6C13B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BE98EB-2713-48B1-9DB0-5F30B6C13B5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8CB29A-AC2E-44FE-9E0A-520DC85AD106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8CB29A-AC2E-44FE-9E0A-520DC85AD106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8CB29A-AC2E-44FE-9E0A-520DC85AD106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8CB29A-AC2E-44FE-9E0A-520DC85AD106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87323B30-8DCD-463A-929F-780914D56BC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87323B30-8DCD-463A-929F-780914D56BC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87323B30-8DCD-463A-929F-780914D56BC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87323B30-8DCD-463A-929F-780914D56BC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

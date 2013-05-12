@@ -1,0 +1,63 @@
+﻿@model avizevimde.Areas.Tuketici.Models.oda
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Tuketici/Views/Shared/_Layout";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>oda</legend>
+         
+       @Html.HiddenFor(model => model.tuketiciId)
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.resim)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.resim)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.resimAdi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.resimAdi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.odaAlani)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.odaAlani)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.odaYukseklik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.odaYukseklik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eklenmeTarihi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.degistirmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.degistirmeTarihi)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

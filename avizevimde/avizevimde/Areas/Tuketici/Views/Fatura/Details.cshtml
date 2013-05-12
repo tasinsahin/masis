@@ -1,0 +1,65 @@
+﻿@model avizevimde.Areas.Tuketici.Models.tuketiciFatura
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Tuketici/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>tuketiciFatura</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tuketici.tuketiciAdi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tuketici.tuketiciAdi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.adresId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.adresId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.vergiDairesi.adi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.vergiDairesi.adi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.vergiNumarasi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.vergiNumarasi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eklenmeTarihi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eklenmeTarihi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.degistirilenId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.degistirilenId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.enYeni)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.enYeni)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

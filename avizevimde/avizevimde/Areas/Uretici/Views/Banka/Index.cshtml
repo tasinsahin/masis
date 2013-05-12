@@ -1,0 +1,97 @@
+﻿@model IEnumerable<avizevimde.Areas.Uretici.Models.ureticiBanka>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Uretici/Views/Shared/_Layout.cshtml";
+}
+
+    <div>
+                    <ul class="breadcrumb">
+                        <li>
+                            @Html.ActionLink("Home", "Index", "UreticiAnasayfa")<span class="divider">/</span>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Banka", "Index", "UreticiBanka")
+                    </ul>
+            </div>
+
+
+<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-th"></i>Banka</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+                  	<div class="row-fluid">
+
+                    <p>
+                        @Html.ActionLink("Create New", "Create")
+                    </p>
+                    <table>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ureticiId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.bankaId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.bankaSubeId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.hesapNumarasi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.eklenmeTarihi)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.degistirilenId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.enYeni)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                    @foreach (var item in Model) {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ureticiId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.bankaId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.bankaSubeId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.hesapNumarasi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.eklenmeTarihi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.degistirilenId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.enYeni)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                            </td>
+                        </tr>
+                    }
+
+                    </table>
+
+                  	</div>                   
+                  </div>
+				</div><!--/span-->
+			</div><!--/row-->

@@ -1,0 +1,60 @@
+﻿@model avizevimde.Models.oneri
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>oneri</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Eposta)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Eposta)
+            @Html.ValidationMessageFor(model => model.Eposta)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.baslik)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.baslik)
+            @Html.ValidationMessageFor(model => model.baslik)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.icerik)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.icerik)
+            @Html.ValidationMessageFor(model => model.icerik)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.eklenmeTarihi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.eklenmeTarihi)
+            @Html.ValidationMessageFor(model => model.eklenmeTarihi)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

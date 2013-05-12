@@ -1,0 +1,212 @@
+﻿@{
+    ViewBag.Title = "DavetEt";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+   <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td id="center" valign="top">
+                <div id="center_top">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr></tr>
+                    </table>
+                </div>
+                <div id="center_middle">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td id="middle_center" valign="top">
+                                <div id="affiliateinviter" class="module">
+                                    <div id="module_content">
+                                        <div id="module_title">
+                                            <span><span id="module_title_icon"></span>Invite A Friend</span>
+                                        </div>
+                                        <div id="ctl04_inviterTab">
+                                            <ul>
+                                                <li><a href="#tab_providers">From Address Book</a></li>
+                                                <li><a href="#tab_mail">Send Mail</a></li>
+                                                <li><a href="#tab_network">Share On Social Networks</a></li>
+                                                <li><a href="#tab_invited">Invited</a></li>
+                                            </ul>
+                                            <div id="tab_providers">
+                                                <input name="ctl04$servicename" type="hidden" id="ctl04_servicename" /><table id="providerstable">
+                                                    <tr>
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <input type="radio" name="rbprvider" value="0" id="rb_0" onclick="selectprovider('0');" /></td>
+                                                                    <td align="left" valign="bottom"><a href="#" onclick="selectprovider('0');" title="Hotmail">
+                                                                        <img src="themes/default/affiliate/images/logo_01.png" width='100' alt="Hotmail" style="border: none" title="Hotmail" /></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <input type="radio" name="rbprvider" value="1" id="rb_1" onclick="selectprovider('1');" /></td>
+                                                                    <td align="left"><a href="#" onclick="selectprovider('1');" title="Mynet">
+                                                                        <img src="themes/default/affiliate/images/mynet_logo.png" width='100' alt="Mynet" style="border: none" title="Mynet" /></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <input type="radio" name="rbprvider" value="2" id="rb_2" onclick="selectprovider('2');" /></td>
+                                                                    <td align="left"><a href="#" onclick="selectprovider('2');" title="Gmail">
+                                                                        <img src="themes/default/affiliate/images/logo_03.png" width='100' alt="Gmail" style="border: none" title="Gmail" /></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <input type="radio" name="rbprvider" value="3" id="rb_3" onclick="selectprovider('3');" /></td>
+                                                                    <td align="left"><a href="#" onclick="selectprovider('3');" title="Yahoo">
+                                                                        <img src="themes/default/affiliate/images/logo_04.png" width='100' alt="Yahoo" style="border: none" title="Yahoo" /></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <input type="radio" name="rbprvider" value="4" id="rb_4" onclick="selectprovider('4');" /></td>
+                                                                    <td align="left" valign="bottom"><a href="#" onclick="selectprovider('4');" title="Msn">
+                                                                        <img src="themes/default/affiliate/images/logo_06.png" width='100' alt="Msn" style="border: none" title="Msn" /></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <input type="radio" name="rbprvider" value="5" id="rb_5" onclick="selectprovider('5');" /></td>
+                                                                    <td align="left" valign="bottom"><a href="#" onclick="selectprovider('5');" title="Windows Live">
+                                                                        <img src="themes/default/affiliate/images/logo_07.png" width='100' alt="Windows Live" style="border: none" title="Windows Live" /></a></td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <div id="ctl04_providerUpdatePanel">
+                                                    <div id="ctl04_tblproviderlogin">
+                                                        <table cellpadding="4" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td align="right"><span id="ctl04_lblservicename"></span>User name:</td>
+                                                                <td>
+                                                                    <input name="ctl04$txtuid" type="text" id="ctl04_txtuid" onkeydown="javascript:return OnEnterPres(event)" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right"><span id="ctl04_lblservicename2"></span>Your Password:</td>
+                                                                <td>
+                                                                    <input name="ctl04$txtupass" type="password" id="ctl04_txtupass" onkeydown="javascript:return OnEnterPres(event)" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right"></td>
+                                                                <td>
+                                                                    <input type="submit" name="ctl04$btngetcontacts" value="Invite" onclick="javascript: return showloading();" id="ctl04_btngetcontacts" class="button" /></td>
+                                                            </tr>
+                                                        </table>
+                                                        <div id="loadingdiv" style="display: none">
+                                                            <img alt="" src="themes/default/affiliate/images/load.gif" />Please wait...
+                                                        </div>
+                                                        <div id="ctl04_contactsmsgdiv" style="color: Red;"></div>
+                                                    </div>
+                                                    <div id="ctl04_providercontactsdiv">
+                                                        <div id="ctl04_tblprovidersend">
+                                                            <label>Your Message</label><textarea name="ctl04$txtMessage" rows="2" cols="20" id="ctl04_txtMessage" style="height: 100px; width: 400px;">mmmm se&#231;kin markaların sınırlı sayıdaki &#252;r&#252;nlerini, 
+belirli bir s&#252;re i&#231;in b&#252;y&#252;k indirimlerle &#252;yelerine sunuyor.mmmm'a &#252;ye ol, sen de ayrıcalıklı alışverişin keyfini yaşa.</textarea><label>Click Send button to send invitations.</label><input type="submit" name="ctl04$btnSend" value="Send" id="ctl04_btnSend" class="button" />
+                                                        </div>
+                                                        <div id="ctl04_tblprovidersendend">
+                                                            <label>Sent Successfully</label><a class="button" href="invite.html">Back</a>
+                                                        </div>
+                                                        <div id="ctl04_dgcontactsdiv" style="height: 260px; width: 500px; overflow: scroll; overflow-x: hidden"></div>
+                                                        <div id="ctl04_providermessagediv"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab_mail">
+                                                <div id="ctl04_sendmailUpdatePanel">
+                                                    <div id="ctl04_tblsendmail" style="width: 100%;">
+                                                        <label>Your Message</label><textarea name="ctl04$txtmessage2" rows="2" cols="20" id="ctl04_txtmessage2" style="height: 150px; width: 400px;">mmmm se&#231;kin markaların sınırlı sayıdaki &#252;r&#252;nlerini, 
+belirli bir s&#252;re i&#231;in b&#252;y&#252;k indirimlerle &#252;yelerine sunuyor.mmmm'a &#252;ye ol, sen de ayrıcalıklı alışverişin keyfini yaşa.</textarea><label>E-Mail Addresses</label><label>Use comma between email addresses to seperate.</label><textarea name="ctl04$txtmailadress" rows="2" cols="20" id="ctl04_txtmailadress" style="height: 150px; width: 400px;"></textarea><input type="submit" name="ctl04$btnsendtoaddress" value="Send" id="ctl04_btnsendtoaddress" class="button" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="tab_network">
+                                                <label>Share on social networks.</label><div id="share"><a rel="nofollow" href="http://www.facebook.com/sharer.php?t=Arkada%c5%9f%c4%b1n%c4%b1z+sizi+mmmm'a+davet+ediyor.&amp;u=http%3a%2f%2fdemo.proticaret.org%3fAffiliateId%3d0" target="_blank">
+                                                    <img width="24" src="themes/default/images/social/facebook_24.png" style="border: 0;" alt="facebook'ta paylaş" /></a><a rel="nofollow" href="http://www.google.com/bookmarks/mark?op=edit&amp;bkmk=http%3a%2f%2fdemo.proticaret.org%3fAffiliateId%3d0&amp;title=Arkada%c5%9f%c4%b1n%c4%b1z+sizi+mmmm'a+davet+ediyor." target="_blank"><img width="24" src="themes/default/images/social/google_24.jpg" style="border: 0;" alt="google favorilerime ekle" /></a><a rel="nofollow" href="http://twitter.com/home?status=Arkada%c5%9f%c4%b1n%c4%b1z+sizi+mmmm'a+davet+ediyor. http%3a%2f%2fdemo.proticaret.org%3fAffiliateId%3d0" target="_blank"><img width="24" src="themes/default/images/social/twitter_24.png" style="border: 0;" alt="twitter'da paylaş" /></a><a rel="nofollow" href="http://friendfeed.com/?url=http%3a%2f%2fdemo.proticaret.org%3fAffiliateId%3d0&amp;title=Arkada%c5%9f%c4%b1n%c4%b1z+sizi+mmmm'a+davet+ediyor." target="_blank"><img width="24" src="themes/default/images/social/friendfeed_24.png" style="border: 0;" alt="friendfeed'de paylaş" /></a><a rel="nofollow" href="http://www.myspace.com/Modules/PostTo/Pages/?u=http%3a%2f%2fdemo.proticaret.org%3fAffiliateId%3d0&amp;t=Arkada%c5%9f%c4%b1n%c4%b1z+sizi+mmmm'a+davet+ediyor." target="_blank"><img width="24" src="themes/default/images/social/myspace_24.png" style="border: 0;" alt="myspace'te paylaş" /></a><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3a%2f%2fdemo.proticaret.org%3fAffiliateId%3d0" target="_blank"><img width="24" src="themes/default/images/social/digg_24.png" style="border: 0;" alt="Digg'e ekle" /></a><a rel="nofollow" href="http://del.icio.us/post?url=http%3a%2f%2fdemo.proticaret.org%3fAffiliateId%3d0&amp;title=Arkada%c5%9f%c4%b1n%c4%b1z+sizi+mmmm'a+davet+ediyor." target="_blank"><img width="24" src="themes/default/images/social/delicious_24.png" style="border: 0;" alt="Delicious'a ekle" /></a><a rel="nofollow" href="http://www.stumbleupon.com/submit?url=http%3a%2f%2fdemo.proticaret.org%3fAffiliateId%3d0" target="_blank"><img width="24" src="themes/default/images/social/stumbleupon_24.png" style="border: 0;" alt="Stumbleupon'da paylaş" /></a><a rel="nofollow" href="http://reddit.com/submit?url=http%3a%2f%2fdemo.proticaret.org%3fAffiliateId%3d0&amp;title=Arkada%c5%9f%c4%b1n%c4%b1z+sizi+mmmm'a+davet+ediyor." target="_blank"><img width="24" src="themes/default/images/social/reddit_24.png" style="border: 0;" alt="reddit'e ekle" /></a><div class="clear"></div>
+                                                </div>
+                                                <label>Your special invitation link,.<br>
+                                                    <b>http://demo.proticaret.org/?AffiliateId = 6a7e3bf0-f26e-4187-a497-23ceecdcf0dc</b></label></div>
+                                            <div id="tab_invited">
+                                                <div id="ctl04_updPnlinvited">
+                                                    <input onclick="__doPostBack('ctl04$loadinvited', '')" name="ctl04$loadinvited" type="button" id="ctl04_loadinvited" style="display: none" /></div>
+                                            </div>
+                                            <script language="javascript" type="text/javascript">
+                                                jQuery(document).ready(function () {
+                                                    jQuery(window).bind("load", function () {
+                                                        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);                                                        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler);
+                                                    });
+                                                });                                                var selectedTabIndex;                                                function BeginRequestHandler(sender, args) {
+                                                    args.get_request().get_headers()["Content-Type"] = "application/x-www-form-urlencoded; charset=utf-8";                                                    var inviterTab = $("#ctl04_inviterTab").tabs();                                                    selectedTabIndex = inviterTab.tabs('option', 'selected');
+                                                }
+                                                function EndRequestHandler(sender, args) {
+                                                    args.get_request().get_headers()["Content-Type"] = "application/x-www-form-urlencoded; charset=utf-8";                                                    var inviterTab = $("#ctl04_inviterTab").tabs();                                                    inviterTab.tabs('select', selectedTabIndex);
+                                                }                                                $(document).ready(function () {
+                                                    $("#ctl04_inviterTab").tabs();                                                    selectprovider('0');
+                                                });                                                function hidecontactsdiv() {
+                                                    try {
+                                                        if (document.getElementById("ctl04_providercontactsdiv") != null)                                                            document.getElementById("ctl04_providercontactsdiv").innerHTML = "";                                                        if (document.getElementById("ctl04_contactsmsgdiv") != null)                                                            document.getElementById("ctl04_contactsmsgdiv").innerHTML = "";
+                                                    } catch (e) { }
+                                                }                                                function selectproviderrb(a) {
+                                                    for (var i = 0; i < 10; i++) {
+                                                        if (document.getElementById("rb_" + i) != null)                                                            document.getElementById("rb_" + i).checked = false;
+                                                    }                                                    document.getElementById("rb_" + a).checked = true;
+                                                }                                                function selectprovider(a) {
+                                                    var servicearray = "Hotmail,Mynet,Gmail,Yahoo,Msn,Windows Live";                                                    var servicename = servicearray.split(',');                                                    showlogintable();                                                    $("#ctl04_tblproviderlogin").fadeIn("1000");                                                    hidecontactsdiv();                                                    document.getElementById("ctl04_servicename").value = servicename[a];                                                    document.getElementById("ctl04_lblservicename").innerHTML = servicename[a]                                                    document.getElementById("ctl04_lblservicename2").innerHTML = servicename[a]                                                    selectproviderrb(a);                                                    window.setTimeout("makefocus()", 1001);
+                                                }                                                function makefocus() {
+                                                    document.getElementById("ctl04_txtuid").focus();
+                                                }                                                function showlogintable() {
+                                                    document.getElementById("ctl04_tblproviderlogin").style.display = "";                                                    return false;
+                                                }                                                function hidelogintable() {
+                                                    document.getElementById("ctl04_tblproviderlogin").style.display = "none";                                                    return false;
+                                                }                                                function showloading() {
+                                                    document.getElementById("ctl04_contactsmsgdiv").innerHTML = "";                                                    document.getElementById("loadingdiv").style.display = "";                                                    return true;
+                                                }                                                function OnEnterPres(e) {
+                                                    var code;                                                    if (!e) var e = window.event;                                                    if (e.keyCode) code = e.keyCode;                                                    else if (e.which) code = e.which;                                                    if (code == 13) {
+                                                        document.getElementById("ctl04_btngetcontacts").click();
+                                                    }
+                                                }                                                function checkallcb(checkid, checkVal) {
+                                                    re = new RegExp(checkid)                                                    for (i = 0; i < document.forms[0].elements.length; i++) {
+                                                        elm = document.forms[0].elements[i]                                                        if (elm.type == 'checkbox') {
+                                                            if (re.test(elm.name)) {
+                                                                elm.checked = checkVal
+                                                            }
+                                                        }
+                                                    }
+                                                }                                                $('#ctl04_inviterTab').bind('tabsselect', function (event, ui) {
+                                                    var str = String(ui.tab);                                                    if (str.indexOf("tab_invited") > 0) {
+                                                        var updateControl = $get('ctl04' + '_loadinvited');                                                        if ($get('ctl04' + '_invitedContent')) return;                                                        if (updateControl) {
+                                                            updateControl.click();
+                                                        }
+                                                    }
+                                                });</script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="center_bottom">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr></tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>

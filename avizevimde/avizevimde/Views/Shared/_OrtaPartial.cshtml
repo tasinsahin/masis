@@ -1,0 +1,667 @@
+﻿@{
+    Layout = null;
+}
+
+<div id="module_content">
+    <div id="module_title">
+        <span><span id="module_title_icon"></span>Ürünler</span>
+    </div>
+    <div>
+        <label></label>
+        <div id="ctl09_UpdatePanel1">
+            <table id="ctl09_tblUrunListesi" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td align="right">
+                        <table cellspacing="0" cellpadding="8" border="0">
+                            <tr>
+                                <td>Stokta Olanlar</td>
+                                <td>
+                                    <input id="ctl09_chkStock" type="checkbox" name="ctl09$chkStock" onclick="javascript: setTimeout('__doPostBack(\'ctl09$chkStock\',\'\')', 0)" /></td>
+                                <td>Ürün Gösterimi :</td>
+                                <td>
+                                    <select name="ctl09$ddlShow" onchange="javascript:setTimeout('__doPostBack(\'ctl09$ddlShow\',\'\')', 0)" id="ctl09_ddlShow" class="dropdownlist">
+                                        <option selected="selected" value="Detay">Galeri</option>
+                                        <option value="Liste">Liste</option>
+                                    </select></td>
+                                <td>Sıralama :</td>
+                                <td>
+                                    <select name="ctl09$ddlOrderBy" onchange="javascript:setTimeout('__doPostBack(\'ctl09$ddlOrderBy\',\'\')', 0)" id="ctl09_ddlOrderBy" class="dropdownlist">
+                                        <option selected="selected" value="OrderByDefault">Varsayılan</option>
+                                        <option value="OrderByNameAsc">Ada G&#246;re (A'dan Z'ye)</option>
+                                        <option value="OrderByNameDesc">Ada G&#246;re (Z'den A'ya)</option>
+                                        <option value="OrderByPriceAsc">Fiyata G&#246;re (Artan)</option>
+                                        <option value="OrderByPriceDesc">Fiyata G&#246;re (Azalan)</option>
+                                    </select></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="ctl09_pnlList"></td>
+                </tr>
+                <tr>
+                    <td id="ctl09_pnlGalery">
+                        <table id="ctl09_dlGalery" cellspacing="0" border="0" style="width: 100%; border-collapse: collapse;">
+                            <tr>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl00_HyperLink6q" href="kategori/telefon.html">Telefon</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/apple-iphone-4-16-gb-cep-telefonu-kvk-onayli_11227d3.html?CatId=102'>
+                                                            <img id="ctl09_dlGalery_ctl00_Image1q" title="Apple Iphone 4 16 Gb Cep Telefonu KVK Onaylı" src="~/Content/store/makethumbdf3e.jpg?file=/sample/iphone.jpg&amp;intSize=130" alt="Apple Iphone 4 16 Gb Cep Telefonu KVK Onaylı" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl00_lnkProductName" href="urun/apple-iphone-4-16-gb-cep-telefonu-kvk-onayli_11227d3.html?CatId=102">Apple Iphone 4 16 Gb Cep Telefonu KVK Onaylı</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl00_Label41">APPLE</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl00_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl00_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl00_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopup455f.html?ProductId=112'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl00_Label2" class="old_price">2.360,00 TL</span><span id="ctl09_dlGalery_ctl00_Label4"> 2.183,00 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl00_Hyperlink9" class="lightbox button" href="~/Content/store/instalments455f.html?ProductId=112">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: block;"></div>
+                                                        <div id="IndirimliUrun" style="display: block;">%8<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: block;"></div>
+                                                        <div id="EnUcuzUrun" style="display: block;"></div>
+                                                        <div id="AyniGunTeslim" style="display: block;"></div>
+                                                        <div id="OzelUrun" style="display: block;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: block;"></div>
+                                                        <div id="YeniUrun" style="display: block;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: block;"></div>
+                                                        <div id="HediyeliUrun" style="display: block;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl01_HyperLink6q" href="kategori/giyim.html">Giyim</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/bayan-keten-pantolon_12698ad.html?CatId=129'>
+                                                            <img id="ctl09_dlGalery_ctl01_Image1q" title="Bayan Keten Pantolon" src="~/Content/store/makethumbb301.jpg?file=\sample\pant_03.jpg&amp;intSize=130" alt="Bayan Keten Pantolon" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl01_lnkProductName" href="urun/bayan-keten-pantolon_12698ad.html?CatId=129">Bayan Keten Pantolon</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl01_Label41"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl01_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl01_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl01_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopup0d74.html?ProductId=126'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl01_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl01_Label4">106,20 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl01_Hyperlink9" class="lightbox button" href="~/Content/store/instalments0d74.html?ProductId=126">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: block;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: none;"></div>
+                                                        <div id="EnUcuzUrun" style="display: block;"></div>
+                                                        <div id="AyniGunTeslim" style="display: block;"></div>
+                                                        <div id="OzelUrun" style="display: none;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: block;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl02_HyperLink6q" href="kategori/giyim.html">Giyim</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/erkek-ceket_12598ad.html?CatId=129'>
+                                                            <img id="ctl09_dlGalery_ctl02_Image1q" title="Erkek Ceket" src="~/Content/store/makethumb0711.jpg?file=\sample\ceket_02.jpg&amp;intSize=130" alt="Erkek Ceket" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl02_lnkProductName" href="urun/erkek-ceket_12598ad.html?CatId=129">Erkek Ceket</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl02_Label41"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl02_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl02_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl02_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopup080f.html?ProductId=125'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl02_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl02_Label4">188,80 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl02_Hyperlink9" class="lightbox button" href="~/Content/store/instalments080f.html?ProductId=125">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: block;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: block;"></div>
+                                                        <div id="EnUcuzUrun" style="display: none;"></div>
+                                                        <div id="AyniGunTeslim" style="display: none;"></div>
+                                                        <div id="OzelUrun" style="display: block;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: none;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: block;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl03_HyperLink6q" href="kategori/bilgisayar.html">Bilgisayar</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/sony-vaio-vpc-eb4j1e-wi_113d42a.html?CatId=101'>
+                                                            <img id="ctl09_dlGalery_ctl03_Image1q" title="Sony Vaio VPC-EB4J1E-WI" src="~/Content/store/makethumb36f3.jpg?file=/sample/Notebook.jpg&amp;intSize=130" alt="Sony Vaio VPC-EB4J1E-WI" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl03_lnkProductName" href="urun/sony-vaio-vpc-eb4j1e-wi_113d42a.html?CatId=101">Sony Vaio VPC-EB4J1E-WI</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl03_Label41">SONY</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl03_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl03_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl03_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopupfb76.html?ProductId=113'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl03_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl03_Label4">1.085,60 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl03_Hyperlink9" class="lightbox button" href="~/Content/store/instalmentsfb76.html?ProductId=113">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: none;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: block;"></div>
+                                                        <div id="EnUcuzUrun" style="display: none;"></div>
+                                                        <div id="AyniGunTeslim" style="display: none;"></div>
+                                                        <div id="OzelUrun" style="display: none;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: none;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl04_HyperLink6q" href="kategori/bilgisayar.html">Bilgisayar</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/apple-imac-z0m7qi7_114d42a.html?CatId=101'>
+                                                            <img id="ctl09_dlGalery_ctl04_Image1q" title="Apple iMac Z0M7Qi7" src="~/Content/store/makethumbbd16.jpg?file=/sample/desktoppc.jpg&amp;intSize=130" alt="Apple iMac Z0M7Qi7" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl04_lnkProductName" href="urun/apple-imac-z0m7qi7_114d42a.html?CatId=101">Apple iMac Z0M7Qi7</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl04_Label41">APPLE</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl04_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl04_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl04_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopupc817.html?ProductId=114'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl04_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl04_Label4">9.733,17 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl04_Hyperlink9" class="lightbox button" href="~/Content/store/instalmentsc817.html?ProductId=114">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: none;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: block;"></div>
+                                                        <div id="EnUcuzUrun" style="display: none;"></div>
+                                                        <div id="AyniGunTeslim" style="display: none;"></div>
+                                                        <div id="OzelUrun" style="display: none;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: none;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl05_HyperLink6q" href="kategori/elektronik.html">Elektronik</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/samsung-lcd-tv-le-32d550_116b235.html?CatId=103'>
+                                                            <img id="ctl09_dlGalery_ctl05_Image1q" title="Samsung LCD TV LE-32D550" src="~/Content/store/makethumbf60c.jpg?file=/sample/lcdtv.jpg&amp;intSize=130" alt="Samsung LCD TV LE-32D550" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl05_lnkProductName" href="urun/samsung-lcd-tv-le-32d550_116b235.html?CatId=103">Samsung LCD TV LE-32D550</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl05_Label41">SAMSUNG</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl05_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl05_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl05_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopup1734.html?ProductId=116'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl05_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl05_Label4">1.203,60 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl05_Hyperlink9" class="lightbox button" href="~/Content/store/instalments1734.html?ProductId=116">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: block;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: block;"></div>
+                                                        <div id="EnUcuzUrun" style="display: block;"></div>
+                                                        <div id="AyniGunTeslim" style="display: none;"></div>
+                                                        <div id="OzelUrun" style="display: block;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: block;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: block;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl06_HyperLink6q" href="kategori/elektronik.html">Elektronik</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/philips-raga-mp3-player-sa2rga02sn_117b235.html?CatId=103'>
+                                                            <img id="ctl09_dlGalery_ctl06_Image1q" title="Philips Raga Mp3 Player SA2RGA02SN" src="~/Content/store/makethumba045.jpg?file=/sample/mp3.jpg&amp;intSize=130" alt="Philips Raga Mp3 Player SA2RGA02SN" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl06_lnkProductName" href="urun/philips-raga-mp3-player-sa2rga02sn_117b235.html?CatId=103">Philips Raga Mp3 Player SA2RGA02SN</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl06_Label41">APPLE</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl06_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl06_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl06_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopup9138.html?ProductId=117'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl06_Label2" class="old_price">106,20 TL</span><span id="ctl09_dlGalery_ctl06_Label4"> 88,50 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl06_Hyperlink9" class="lightbox button" href="~/Content/store/instalments9138.html?ProductId=117">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: none;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%17<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: none;"></div>
+                                                        <div id="EnUcuzUrun" style="display: none;"></div>
+                                                        <div id="AyniGunTeslim" style="display: none;"></div>
+                                                        <div id="OzelUrun" style="display: block;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: block;"></div>
+                                                        <div id="YeniUrun" style="display: none;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl07_HyperLink6q" href="kategori/foto---kamera.html">Foto & Kamera</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/fujifilm-finepix-s2950hd_1189865.html?CatId=110'>
+                                                            <img id="ctl09_dlGalery_ctl07_Image1q" title="Fujifilm FinePix S2950HD" src="~/Content/store/makethumb884c.jpg?file=/sample/dcam.jpg&amp;intSize=130" alt="Fujifilm FinePix S2950HD" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl07_lnkProductName" href="urun/fujifilm-finepix-s2950hd_1189865.html?CatId=110">Fujifilm FinePix S2950HD</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl07_Label41">FUJİFİLM</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl07_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl07_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl07_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopupdccd.html?ProductId=118'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl07_Label2" class="old_price">708,00 TL</span><span id="ctl09_dlGalery_ctl07_Label4"> 684,40 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl07_Hyperlink9" class="lightbox button" href="~/Content/store/instalmentsdccd.html?ProductId=118">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: none;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%3<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: none;"></div>
+                                                        <div id="EnUcuzUrun" style="display: none;"></div>
+                                                        <div id="AyniGunTeslim" style="display: none;"></div>
+                                                        <div id="OzelUrun" style="display: none;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: block;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: block;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl08_HyperLink6q" href="kategori/foto---kamera.html">Foto & Kamera</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/sony-dcr-sx15e_1199865.html?CatId=110'>
+                                                            <img id="ctl09_dlGalery_ctl08_Image1q" title="Sony DCR-SX15E" src="~/Content/store/makethumb62c8.jpg?file=/sample/vcam.jpg&amp;intSize=130" alt="Sony DCR-SX15E" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl08_lnkProductName" href="urun/sony-dcr-sx15e_1199865.html?CatId=110">Sony DCR-SX15E</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl08_Label41">SONY</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl08_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl08_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl08_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopup4658.html?ProductId=119'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl08_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl08_Label4">649,00 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl08_Hyperlink9" class="lightbox button" href="~/Content/store/instalments4658.html?ProductId=119">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: none;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: none;"></div>
+                                                        <div id="EnUcuzUrun" style="display: block;"></div>
+                                                        <div id="AyniGunTeslim" style="display: none;"></div>
+                                                        <div id="OzelUrun" style="display: none;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: block;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl09_HyperLink6q" href="kategori/bahce---hirdavat.html">Bahçe & Hırdavat</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/bosch-darbeli-matkap_12251b6.html?CatId=128'>
+                                                            <img id="ctl09_dlGalery_ctl09_Image1q" title="Bosch Darbeli Matkap" src="~/Content/store/makethumbd2d1.jpg?file=/sample/drill.jpg&amp;intSize=130" alt="Bosch Darbeli Matkap" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl09_lnkProductName" href="urun/bosch-darbeli-matkap_12251b6.html?CatId=128">Bosch Darbeli Matkap</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl09_Label41">Bosch</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl09_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl09_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl09_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopup02b2.html?ProductId=122'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl09_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl09_Label4">318,60 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl09_Hyperlink9" class="lightbox button" href="~/Content/store/instalments02b2.html?ProductId=122">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: block;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: block;"></div>
+                                                        <div id="EnUcuzUrun" style="display: none;"></div>
+                                                        <div id="AyniGunTeslim" style="display: none;"></div>
+                                                        <div id="OzelUrun" style="display: none;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: block;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl10_HyperLink6q" href="kategori/bahce---hirdavat.html">Bahçe & Hırdavat</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/bosch-cim-bicme-makinasi_12351b6.html?CatId=128'>
+                                                            <img id="ctl09_dlGalery_ctl10_Image1q" title="Bosch Çim Biçme Makinası" src="~/Content/store/makethumb787a.jpg?file=/sample/cim.jpg&amp;intSize=130" alt="Bosch Çim Biçme Makinası" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl10_lnkProductName" href="urun/bosch-cim-bicme-makinasi_12351b6.html?CatId=128">Bosch Çim Biçme Makinası</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl10_Label41">Bosch</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl10_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl10_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl10_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopupc42e.html?ProductId=123'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl10_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl10_Label4">342,20 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl10_Hyperlink9" class="lightbox button" href="~/Content/store/instalmentsc42e.html?ProductId=123">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: none;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: none;"></div>
+                                                        <div id="EnUcuzUrun" style="display: none;"></div>
+                                                        <div id="AyniGunTeslim" style="display: none;"></div>
+                                                        <div id="OzelUrun" style="display: none;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: none;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl11_HyperLink6q" href="kategori/telefon.html">Telefon</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/iphone-kilif_12427d3.html?CatId=102'>
+                                                            <img id="ctl09_dlGalery_ctl11_Image1q" title="iphone Kılıf" src="~/Content/store/makethumbcb56.jpg?file=/sample/iphonecase.jpg&amp;intSize=130" alt="iphone Kılıf" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl11_lnkProductName" href="urun/iphone-kilif_12427d3.html?CatId=102">iphone Kılıf</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl11_Label41">APPLE</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl11_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl11_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl11_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: ' href='store/addtocartpopup2028.html?ProductId=124'>Sepete Ekle
+                                                        </a>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl11_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl11_Label4">82,60 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl11_Hyperlink9" class="lightbox button" href="~/Content/store/instalments2028.html?ProductId=124">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: none;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: none;"></div>
+                                                        <div id="EnUcuzUrun" style="display: none;"></div>
+                                                        <div id="AyniGunTeslim" style="display: none;"></div>
+                                                        <div id="OzelUrun" style="display: none;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: none;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl12_HyperLink6q" href="kategori/telefon.html">Telefon</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/siemens-gigaset-a585_11127d3.html?CatId=102'>
+                                                            <img id="ctl09_dlGalery_ctl12_Image1q" title="Siemens Gigaset A585" src="~/Content/store/makethumb6185.jpg?file=/sample/phone.jpg&amp;intSize=130" alt="Siemens Gigaset A585" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl12_lnkProductName" href="urun/siemens-gigaset-a585_11127d3.html?CatId=102">Siemens Gigaset A585</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl12_Label41">SİEMENS</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl12_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl12_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl12_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: none' href='store/addtocartpopupf926.html?ProductId=111'>Sepete Ekle
+                                                        </a><span id="ctl09_dlGalery_ctl12_Label31" class="stock_out">Stokta Yok !</span>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl12_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl12_Label4">264,19 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl12_Hyperlink9" class="lightbox button" href="~/Content/store/instalmentsf926.html?ProductId=111">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: none;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: block;"></div>
+                                                        <div id="EnUcuzUrun" style="display: none;"></div>
+                                                        <div id="AyniGunTeslim" style="display: block;"></div>
+                                                        <div id="OzelUrun" style="display: none;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: none;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl13_HyperLink6q" href="kategori/saat.html">Saat</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/erkek-kol-saati-xvr55_1202410.html?CatId=119'>
+                                                            <img id="ctl09_dlGalery_ctl13_Image1q" title="Erkek Kol Saati XVR55" src="~/Content/store/makethumb94f1.jpg?file=/sample/watch.jpg&amp;intSize=130" alt="Erkek Kol Saati XVR55" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl13_lnkProductName" href="urun/erkek-kol-saati-xvr55_1202410.html?CatId=119">Erkek Kol Saati XVR55</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl13_Label41">CHRONE</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl13_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl13_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl13_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: none' href='store/addtocartpopup3148.html?ProductId=120'>Sepete Ekle
+                                                        </a><span id="ctl09_dlGalery_ctl13_Label31" class="stock_out">Stokta Yok !</span>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl13_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl13_Label4">601,80 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl13_Hyperlink9" class="lightbox button" href="~/Content/store/instalments3148.html?ProductId=120">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: none;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: none;"></div>
+                                                        <div id="EnUcuzUrun" style="display: none;"></div>
+                                                        <div id="AyniGunTeslim" style="display: none;"></div>
+                                                        <div id="OzelUrun" style="display: none;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: block;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center" valign="top">
+                                    <div id="product_container">
+                                        <div id="product">
+                                            <div id="product_outside">
+                                                <div id="product_inside">
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl14_HyperLink6q" href="kategori/saat.html">Saat</a></p>
+                                                    <div id="product_image">
+                                                        <a href='urun/bayan-kol-saati-yt65_1212410.html?CatId=119'>
+                                                            <img id="ctl09_dlGalery_ctl14_Image1q" title="Bayan Kol Saati YT65" src="~/Content/store/makethumbe10c.jpg?file=/sample/watch2.jpg&amp;intSize=130" alt="Bayan Kol Saati YT65" style="border-style: None; border-width: 0px;" /></a>
+                                                    </div>
+                                                    <div id="product_name"><a id="ctl09_dlGalery_ctl14_lnkProductName" href="urun/bayan-kol-saati-yt65_1212410.html?CatId=119">Bayan Kol Saati YT65</a></div>
+                                                    <div style="display: none"><span id="ctl09_dlGalery_ctl14_Label41">POLAND</span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl14_Label45"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl14_Label1"></span></div>
+                                                    <div><span id="ctl09_dlGalery_ctl14_Label5q"></span></div>
+                                                    <div id="product_add">
+                                                        <a id="btnAddToCart" class="cartbutton" style='display: none' href='store/addtocartpopup4688.html?ProductId=121'>Sepete Ekle
+                                                        </a><span id="ctl09_dlGalery_ctl14_Label31" class="stock_out">Stokta Yok !</span>
+                                                    </div>
+                                                    <div id="product_price"><span id="ctl09_dlGalery_ctl14_Label2" class="old_price"></span><span id="ctl09_dlGalery_ctl14_Label4">601,80 TL</span></div>
+                                                    <div class="clear"></div>
+                                                    <p style="display: none"><a id="ctl09_dlGalery_ctl14_Hyperlink9" class="lightbox button" href="~/Content/store/instalments4688.html?ProductId=121">Taksit Listesi</a></p>
+                                                    <div id="homelabels">
+                                                        <div id="FirsatUrunu" style="display: none;"></div>
+                                                        <div id="IndirimliUrun" style="display: none;">%0<img src="~/Content/themes/default/images/icon_down.png" border="0" /></div>
+                                                        <div id="HizliKargo" style="display: none;"></div>
+                                                        <div id="EnUcuzUrun" style="display: none;"></div>
+                                                        <div id="AyniGunTeslim" style="display: block;"></div>
+                                                        <div id="OzelUrun" style="display: none;"></div>
+                                                        <div id="SinirliSayidaUrun" style="display: none;"></div>
+                                                        <div id="YeniUrun" style="display: none;"></div>
+                                                        <div id="SokFiyatliUrun" style="display: none;"></div>
+                                                        <div id="HediyeliUrun" style="display: none;"></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="paging" align="right"><span id="ctl09_PagingLabel"></span><span id="ctl09_RecordsCount" class="RecordsCount"></span></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript" src="~/Content/themes/default/js/rendermodules.js"></script>
+        <script type="text/javascript">            $(".lightbox").colorbox({ width: "300", height: "400", iframe: true, scrolling: false });            $("a[id='btnAddToCart']").colorbox({ width: "400", height: "300", iframe: true, scrolling: false, close: 'Kapat' });            var prm = Sys.WebForms.PageRequestManager.getInstance();            prm.add_endRequest(function () {
+                $(".lightbox").colorbox({ width: "300", height: "400", iframe: true, scrolling: false });                $("a[id='btnAddToCart']").colorbox({ width: "400", height: "300", iframe: true, scrolling: false, close: 'Kapat' });
+            });
+        </script>
+    </div>
+</div>
